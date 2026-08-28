@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Meridian{% endblock %}</title>
+  <title>Judge lifts block on Trump changes to mail voting, though legal fights continue</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ css_href }}">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
   <script>
@@ -18,22 +18,39 @@
       } catch (e) {}
     })();
   </script>
-  {% block header %}
+  
     <header class="masthead-simple">
-      <a class="brand-small" href="{{ url_home() }}">MERIDIAN</a>
+      <a class="brand-small" href="index.html">MERIDIAN</a>
       <nav>
-        {% if not STATIC %}
-          <a href="/topics" class="btn">Follow topics</a>
-          <form method="post" action="/refresh" style="display:inline">
-            <button class="btn" type="submit">Refresh feed</button>
-          </form>
-        {% endif %}
+        
         <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
       </nav>
     </header>
-  {% endblock %}
+  
   <main>
-    {% block content %}{% endblock %}
+    
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill lean-left">lean-left</span>
+      <span class="outlet-name">Washington Post</span>
+    </div>
+    <h1>Judge lifts block on Trump changes to mail voting, though legal fights continue</h1>
+    <p class="hint">2026-08-26 21:31</p>
+
+    
+
+    
+      <p class="body">The president’s executive order is now in effect for the midterm elections, but the ruling leaves the door open to renewed challenges from rights groups.</p>
+      
+        <p class="hint">This source is paywalled, so only the excerpt from its feed is shown here.</p>
+      
+      <p><a href="https://www.washingtonpost.com/politics/2026/08/26/judge-lifts-block-trump-changes-mail-voting-though-legal-fights-continue/" target="_blank" rel="noopener">Open original on Washington Post</a></p>
+    
+
+    
+  </article>
+
   </main>
   <script>
     (function () {
@@ -47,6 +64,6 @@
       });
     })();
   </script>
-  {% if STATIC %}<script src="static/filter.js"></script>{% endif %}
+  <script src="static/filter.js"></script>
 </body>
 </html>

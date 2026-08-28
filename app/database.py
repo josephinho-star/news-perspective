@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from sqlalchemy import event, text
@@ -6,7 +7,7 @@ from sqlmodel import SQLModel, Session, create_engine, select
 from .models import FollowedTopic, Source
 from .sources import SEED_SOURCES, TOPICS
 
-DB_PATH = Path(__file__).resolve().parent.parent / "news.db"
+DB_PATH = Path(os.environ.get("NEWS_DB_PATH") or (Path(__file__).resolve().parent.parent / "news.db"))
 engine = create_engine(
     f"sqlite:///{DB_PATH}",
     connect_args={"check_same_thread": False, "timeout": 30},

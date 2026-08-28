@@ -15,7 +15,7 @@
       <span>stories</span>
     </div>
     <div class="brand-block">
-      <a class="brand" href="/">MERIDIAN</a>
+      <a class="brand" href="{{ url_home() }}">MERIDIAN</a>
       <div class="tagline">Your follows, read across the spectrum</div>
     </div>
     <div class="masthead-actions">
@@ -27,31 +27,44 @@
   <div class="following-row">
     <span class="row-label">Following</span>
     {% for slug, label in all_topics %}
-      <form method="post" action="/topics/toggle" class="chip-form">
-        <input type="hidden" name="slug" value="{{ slug }}">
-        <input type="hidden" name="next" value="/{{ '?bias=' + current_bias if current_bias else '' }}">
-        <button type="submit" class="chip {{ '' if slug in followed_slugs else 'off' }}">
-          {% if slug in followed_slugs %}✓ {% endif %}{{ label }}
-        </button>
-      </form>
+      {% if STATIC %}
+        <button type="button" class="chip topic-toggle" data-topic="{{ slug }}" data-label="{{ label }}">✓ {{ label }}</button>
+      {% else %}
+        <form method="post" action="/topics/toggle" class="chip-form">
+          <input type="hidden" name="slug" value="{{ slug }}">
+          <input type="hidden" name="next" value="/{{ '?bias=' + current_bias if current_bias else '' }}">
+          <button type="submit" class="chip {{ '' if slug in followed_slugs else 'off' }}">
+            {% if slug in followed_slugs %}✓ {% endif %}{{ label }}
+          </button>
+        </form>
+      {% endif %}
     {% endfor %}
   </div>
 
   <div class="bias-filter-row">
     <span class="row-label">Bias filter</span>
     {% for code in bias_order %}
-      <a class="bias-chip {{ code }} {{ 'active' if current_bias == code else '' }}" href="/?bias={{ code }}">{{ BIAS_SHORT[code] }}</a>
+      {% if STATIC %}
+        <button type="button" class="bias-chip {{ code }}" data-bias="{{ code }}">{{ BIAS_SHORT[code] }}</button>
+      {% else %}
+        <a class="bias-chip {{ code }} {{ 'active' if current_bias == code else '' }}" href="/?bias={{ code }}">{{ BIAS_SHORT[code] }}</a>
+      {% endif %}
     {% endfor %}
-    <a class="all-leans {{ 'active' if not current_bias else '' }}" href="/">All leans</a>
-    <form method="post" action="/refresh" class="refresh-form">
-      <button class="text-btn" type="submit">Refresh feed</button>
-    </form>
+    {% if STATIC %}
+      <button type="button" class="all-leans active" data-bias="">All leans</button>
+      <span class="text-btn" style="text-decoration:none; margin-left:auto;">Updated {{ build_time }}</span>
+    {% else %}
+      <a class="all-leans {{ 'active' if not current_bias else '' }}" href="/">All leans</a>
+      <form method="post" action="/refresh" class="refresh-form">
+        <button class="text-btn" type="submit">Refresh feed</button>
+      </form>
+    {% endif %}
   </div>
 </header>
 {% endblock %}
 
 {% block content %}
-  {% if not has_followed %}
+  {% if not STATIC and not has_followed %}
     <p class="hint">You're not following any topics yet, so everything is shown. <a href="/topics">Pick your topics</a>.</p>
   {% endif %}
 
@@ -63,21 +76,21 @@
     </div>
     <div class="blindspots-grid">
       {% if barely_left %}
-      <a class="blindspot-item" href="/cluster/{{ barely_left.id }}">
+      <a class="blindspot-item" href="{{ url_cluster(barely_left.id) }}" data-topics="{{ barely_left.topics|join(',') }}">
         <span class="blindspot-label left">Barely covered by the left</span>
         <h4>{{ barely_left.headline }}</h4>
         <span class="blindspot-meta">{{ barely_left.source_count }} sources &middot; {{ barely_left.right_count }} right-of-centre</span>
       </a>
       {% endif %}
       {% if barely_right %}
-      <a class="blindspot-item" href="/cluster/{{ barely_right.id }}">
+      <a class="blindspot-item" href="{{ url_cluster(barely_right.id) }}" data-topics="{{ barely_right.topics|join(',') }}">
         <span class="blindspot-label right">Barely covered by the right</span>
         <h4>{{ barely_right.headline }}</h4>
         <span class="blindspot-meta">{{ barely_right.source_count }} sources &middot; {{ barely_right.left_count }} left-of-centre</span>
       </a>
       {% endif %}
       {% if barely_anyone %}
-      <a class="blindspot-item" href="/cluster/{{ barely_anyone.id }}">
+      <a class="blindspot-item" href="{{ url_cluster(barely_anyone.id) }}" data-topics="{{ barely_anyone.topics|join(',') }}">
         <span class="blindspot-label anyone">Barely covered by anyone</span>
         <h4>{{ barely_anyone.headline }}</h4>
         <span class="blindspot-meta">{{ barely_anyone.source_count }} sources &middot; smallest cluster today</span>
@@ -96,11 +109,13 @@
 
       {% if not clusters %}
         <p class="hint">No multi-outlet stories yet for your follows in the last few days. Check back after a few more fetch cycles.</p>
+      {% elif STATIC %}
+        <p class="hint" id="noClustersHint" style="display:none">No multi-outlet stories match your current follows/filter.</p>
       {% endif %}
 
       <div class="cluster-grid">
         {% for c in clusters %}
-          <a class="cluster-card" href="/cluster/{{ c.id }}">
+          <a class="cluster-card" href="{{ url_cluster(c.id) }}" data-topics="{{ c.topics|join(',') }}" data-biases="{{ c.biases_present }}">
             {% if c.image_url %}
               <div class="cluster-thumb">
                 <img src="{{ c.image_url }}" alt="" loading="lazy" onerror="this.parentElement.remove()">
@@ -134,7 +149,7 @@
 
       {% for article in river_articles %}
         {% set source = sources[article.source_id] %}
-        <a class="river-item" href="/article/{{ article.id }}">
+        <a class="river-item" href="{{ url_article(article.id) }}" data-topics="{{ article.topics }}" data-biases="{{ source.bias_label }}">
           {% if article.image_url %}
             <div class="river-thumb">
               <img src="{{ article.image_url }}" alt="" loading="lazy" onerror="this.parentElement.remove()">

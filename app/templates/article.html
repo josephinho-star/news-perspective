@@ -2,7 +2,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
   <article class="reader">
-    <a class="back" href="/">&larr; Back to feed</a>
+    <a class="back" href="{{ url_home() }}">&larr; Back to feed</a>
     <div class="river-meta">
       <span class="bias-pill {{ source.bias_label }}">{{ source.bias_label }}</span>
       <span class="outlet-name">{{ source.name }}</span>
@@ -30,6 +30,7 @@
       <p><a href="{{ article.url }}" target="_blank" rel="noopener">Open original on {{ source.name }}</a></p>
     {% endif %}
 
+    {% if not STATIC %}
     <div class="analysis-block">
       {% if analysis %}
         <div class="analysis-panel">
@@ -51,5 +52,6 @@
         <p class="hint">Set <code>ANTHROPIC_API_KEY</code> in <code>.env</code> to enable per-article analysis.</p>
       {% endif %}
     </div>
+    {% endif %}
   </article>
 {% endblock %}

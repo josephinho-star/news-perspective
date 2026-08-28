@@ -54,7 +54,11 @@ templates = Jinja2Templates(directory="app/templates")
 templates.env.globals["BIAS_COLORS"] = BIAS_COLORS
 templates.env.globals["BIAS_SHORT"] = BIAS_SHORT
 templates.env.globals["TOPIC_LABELS"] = dict(TOPICS)
-templates.env.globals["static_version"] = int(os.path.getmtime(Path("app/static/style.css")))
+templates.env.globals["css_href"] = f"/static/style.css?v={int(os.path.getmtime(Path('app/static/style.css')))}"
+templates.env.globals["STATIC"] = False
+templates.env.globals["url_home"] = lambda: "/"
+templates.env.globals["url_article"] = lambda article_id: f"/article/{article_id}"
+templates.env.globals["url_cluster"] = lambda cluster_id: f"/cluster/{cluster_id}"
 templates.env.filters["time_ago"] = time_ago
 
 

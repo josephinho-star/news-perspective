@@ -2,7 +2,7 @@
 {% block title %}{{ cluster.headline }}{% endblock %}
 {% block content %}
   <article class="reader cluster-detail">
-    <a class="back" href="/">&larr; Back to feed</a>
+    <a class="back" href="{{ url_home() }}">&larr; Back to feed</a>
 
     <div class="cluster-meta">
       <span class="cluster-topic">{{ TOPIC_LABELS.get(cluster.primary_topic, cluster.primary_topic)|upper }}</span>
@@ -34,7 +34,7 @@
     <div class="cluster-full-list">
       {% for a in cluster.members %}
         {% set source = sources[a.source_id] %}
-        <a class="river-item" href="/article/{{ a.id }}">
+        <a class="river-item" href="{{ url_article(a.id) }}">
           {% if a.image_url %}
             <div class="river-thumb">
               <img src="{{ a.image_url }}" alt="" loading="lazy" onerror="this.parentElement.remove()">

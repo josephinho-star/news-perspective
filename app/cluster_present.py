@@ -56,12 +56,14 @@ def build_cluster_card(cluster_id: int, members: list, sources: dict) -> dict:
             break
 
     topics = sorted({t for a in members for t in a.topics.split(",") if t})
+    biases_present = [label for label in BIAS_ORDER if counts[label] > 0]
 
     return {
         "id": cluster_id,
         "headline": lead.title,
         "body": body,
         "image_url": image_url,
+        "biases_present": ",".join(biases_present),
         "age": time_ago(lead.published_at),
         "topics": topics,
         "primary_topic": topics[0] if topics else "",

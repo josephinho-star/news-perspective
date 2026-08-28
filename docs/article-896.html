@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Meridian{% endblock %}</title>
+  <title>Americans Feel Guilty About Spending Money on Fun</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ css_href }}">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
   <script>
@@ -18,22 +18,39 @@
       } catch (e) {}
     })();
   </script>
-  {% block header %}
+  
     <header class="masthead-simple">
-      <a class="brand-small" href="{{ url_home() }}">MERIDIAN</a>
+      <a class="brand-small" href="index.html">MERIDIAN</a>
       <nav>
-        {% if not STATIC %}
-          <a href="/topics" class="btn">Follow topics</a>
-          <form method="post" action="/refresh" style="display:inline">
-            <button class="btn" type="submit">Refresh feed</button>
-          </form>
-        {% endif %}
+        
         <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
       </nav>
     </header>
-  {% endblock %}
+  
   <main>
-    {% block content %}{% endblock %}
+    
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">Bloomberg</span>
+    </div>
+    <h1>Americans Feel Guilty About Spending Money on Fun</h1>
+    <p class="hint">2026-08-28 21:02</p>
+
+    
+
+    
+      <p class="body">Bloomberg's  Zijia Song joins Scarlet Fu and Tom Keene on "Bloomberg Money." Almost three-quarters of US adults feel guilty when they spend on things that bring them joy instead of putting the money toward their financial goals. (Source: Bloomberg)</p>
+      
+        <p class="hint">This source is paywalled, so only the excerpt from its feed is shown here.</p>
+      
+      <p><a href="https://www.bloomberg.com/news/videos/2026-08-28/americans-feel-guilty-about-spending-money-on-fun-video" target="_blank" rel="noopener">Open original on Bloomberg</a></p>
+    
+
+    
+  </article>
+
   </main>
   <script>
     (function () {
@@ -47,6 +64,6 @@
       });
     })();
   </script>
-  {% if STATIC %}<script src="static/filter.js"></script>{% endif %}
+  <script src="static/filter.js"></script>
 </body>
 </html>
