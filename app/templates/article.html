@@ -35,6 +35,16 @@
       {% if analysis %}
         <div class="analysis-panel">
           <span class="row-label">Perspective analysis</span>
+          {% if analysis.bias_label %}
+            <div class="article-bias-row">
+              <span class="bias-pill lg {{ analysis.bias_label }}">{{ analysis.bias_label }}</span>
+              <span class="hint">this article's lean, rated from its own text</span>
+              {% if analysis.bias_label != source.bias_label %}
+                <span class="bias-mismatch">source is usually rated {{ source.bias_label }}</span>
+              {% endif %}
+            </div>
+            {% if analysis.bias_explanation %}<p class="bias-explanation">{{ analysis.bias_explanation }}</p>{% endif %}
+          {% endif %}
           <p class="framing-notes">{{ analysis.framing_notes }}</p>
           {% if analysis.claims %}
             <span class="row-label">Claims worth checking elsewhere</span>

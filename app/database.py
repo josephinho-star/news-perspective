@@ -33,6 +33,14 @@ def init_db() -> None:
             session.exec(text("ALTER TABLE article ADD COLUMN image_url TEXT"))
             session.commit()
 
+        analysis_cols = {row[1] for row in session.exec(text("PRAGMA table_info(analysis)"))}
+        if "bias_label" not in analysis_cols:
+            session.exec(text("ALTER TABLE analysis ADD COLUMN bias_label TEXT DEFAULT ''"))
+            session.commit()
+        if "bias_explanation" not in analysis_cols:
+            session.exec(text("ALTER TABLE analysis ADD COLUMN bias_explanation TEXT DEFAULT ''"))
+            session.commit()
+
         existing_source_names = {s.name for s in session.exec(select(Source)).all()}
         for row in SEED_SOURCES:
             if row["name"] not in existing_source_names:

@@ -219,6 +219,8 @@ def analyze(article_id: int, session: Session = Depends(get_session)):
             article_id=article_id,
             framing_notes=result.framing_notes,
             claims="\n".join(result.claims),
+            bias_label=result.bias_label,
+            bias_explanation=result.bias_explanation,
         )
         session.merge(analysis)
         session.commit()

@@ -43,4 +43,6 @@ class Analysis(SQLModel, table=True):
     article_id: int = Field(primary_key=True, foreign_key="article.id")
     framing_notes: str
     claims: str  # newline-separated flagged claims
+    bias_label: str = ""  # left | lean-left | center | lean-right | right, rated from this article's own text
+    bias_explanation: str = ""
     generated_at: datetime = Field(default_factory=datetime.utcnow)
