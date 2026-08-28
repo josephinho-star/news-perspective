@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meridian — your follows, read across the spectrum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+<header class="masthead">
+  <div class="masthead-top">
+    <div class="date-stack">
+      <span>FRI</span>
+      <span>28</span>
+      <span>AUG</span>
+      <span>2026</span>
+    </div>
+    <div class="story-count">
+      <span class="num">76</span>
+      <span>stories</span>
+    </div>
+    <div class="brand-block">
+      <a class="brand" href="index.html">MERIDIAN</a>
+      <div class="tagline">Your follows, read across the spectrum</div>
+    </div>
+    <div class="masthead-actions">
+      <input type="text" class="search-input" placeholder="Search headlines, outlets" disabled title="Search isn't wired up yet">
+      <button class="btn night-toggle" id="nightToggle" type="button">☾ Night</button>
+    </div>
+  </div>
+
+  <div class="following-row">
+    <span class="row-label">Following</span>
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="world" data-label="World">✓ World</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="us-politics" data-label="US Politics">✓ US Politics</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="international-relations" data-label="International Relations">✓ International Relations</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="eu-politics" data-label="EU Politics">✓ EU Politics</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="asia" data-label="Asia">✓ Asia</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="turkey" data-label="Turkey">✓ Turkey</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="business" data-label="Business">✓ Business</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="finance" data-label="Finance">✓ Finance</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="tech" data-label="Tech">✓ Tech</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="science" data-label="Science">✓ Science</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="climate" data-label="Climate">✓ Climate</button>
+      
+    
+      
+        <button type="button" class="chip topic-toggle" data-topic="sports" data-label="Sports">✓ Sports</button>
+      
+    
+  </div>
+
+  <div class="bias-filter-row">
+    <span class="row-label">Bias filter</span>
+    
+      
+        <button type="button" class="bias-chip left" data-bias="left">L</button>
+      
+    
+      
+        <button type="button" class="bias-chip lean-left" data-bias="lean-left">LL</button>
+      
+    
+      
+        <button type="button" class="bias-chip center" data-bias="center">C</button>
+      
+    
+      
+        <button type="button" class="bias-chip lean-right" data-bias="lean-right">LR</button>
+      
+    
+      
+        <button type="button" class="bias-chip right" data-bias="right">R</button>
+      
+    
+    
+      <button type="button" class="all-leans active" data-bias="">All leans</button>
+      <span class="text-btn" style="text-decoration:none; margin-left:auto;">Updated 2026-08-28 21:53 UTC</span>
+    
+  </div>
+</header>
+
+  <main>
+    
+  
+
+  
+  <section class="blindspots-panel">
+    <div class="blindspots-head">
+      <h2>Blindspots today</h2>
+      <span class="blindspots-sub">Stories one side of the spectrum has left almost untouched.</span>
+    </div>
+    <div class="blindspots-grid">
+      
+      <a class="blindspot-item" href="cluster-41db71c66332.html" data-topics="us-politics,world">
+        <span class="blindspot-label left">Barely covered by the left</span>
+        <h4>DOJ Sues 4 More States over in-State Tuition for Illegal Aliens</h4>
+        <span class="blindspot-meta">2 sources &middot; 2 right-of-centre</span>
+      </a>
+      
+      
+      
+      <a class="blindspot-item" href="cluster-a36dbc49f73b.html" data-topics="us-politics">
+        <span class="blindspot-label anyone">Barely covered by anyone</span>
+        <h4>Trump administration asks Supreme Court to allow military’s transgender ban</h4>
+        <span class="blindspot-meta">2 sources &middot; smallest cluster today</span>
+      </a>
+      
+    </div>
+  </section>
+  
+
+  <div class="content-grid">
+    <section class="clusters-col">
+      <div class="river-heading">
+        <h2>Story clusters</h2>
+        <span class="river-sub">One event, every outlet covering it</span>
+      </div>
+
+      
+        <p class="hint" id="noClustersHint" style="display:none">No multi-outlet stories match your current follows/filter.</p>
+      
+
+      <div class="cluster-grid">
+        
+          <a class="cluster-card" href="cluster-d8fc5f34439c.html" data-topics="us-politics,world" data-biases="lean-left,center,right">
+            
+              <div class="cluster-thumb">
+                <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/08/931/523/milo-yiannopolous-arrested-by-ice-in-louisiana.jpg?ve=1&tl=1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">2h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Milo Yiannopoulos arrested by ICE, held at major deportation hub in Louisiana</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:3"></span>
+                
+                  <span class="seg center" style="flex-grow:4"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:1"></span>
+                
+              </div>
+              <span class="coverage-line">50% Center coverage &middot; 8 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-70d1d3d0d815.html" data-topics="business,finance,us-politics,world" data-biases="lean-left,center">
+            
+              <div class="cluster-thumb">
+                <img src="https://thehill.com/wp-content/uploads/sites/2/2026/08/Top-Trump_082726_AP_Manuel-Balce-Ceneta.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">BUSINESS</span>
+              <span class="cluster-time">3h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Trump can’t appeal New York conviction in federal court, judge rules again</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:1"></span>
+                
+                  <span class="seg center" style="flex-grow:5"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">83% Center coverage &middot; 6 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-620a1e2773fe.html" data-topics="business,us-politics,world" data-biases="lean-left,center,right">
+            
+              <div class="cluster-thumb">
+                <img src="https://thehill.com/wp-content/uploads/sites/2/2026/07/AP26210716467952-e1785355225634.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">BUSINESS</span>
+              <span class="cluster-time">1d ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Watch live: Trump speaks amid tariff battles, signs order for ‘Lake America’</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:1"></span>
+                
+                  <span class="seg center" style="flex-grow:4"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:1"></span>
+                
+              </div>
+              <span class="coverage-line">67% Center coverage &middot; 6 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-0f9334314656.html" data-topics="us-politics,world" data-biases="lean-left,center">
+            
+              <div class="cluster-thumb">
+                <img src="https://d3i6fh83elv35t.cloudfront.net/static/2026/08/2022-03-08T005906Z_678070081_RC2RXS9T7VXB_RTRMADP_3_AWARDS-COUNTRY-MUSIC-1024x683.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">1m ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Nashville airport may be renamed to honor Dolly Parton</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:1"></span>
+                
+                  <span class="seg center" style="flex-grow:2"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">67% Center coverage &middot; 3 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-da8b3038a545.html" data-topics="business,finance,science,tech" data-biases="center">
+            
+              <div class="cluster-thumb">
+                <img src="https://techcrunch.com/wp-content/uploads/2025/02/SVOD_AppleTV_Severance-S2_Blog-Post-1-1024x576-1.jpg?w=1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">BUSINESS</span>
+              <span class="cluster-time">6h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Apple TV is raising its subscription prices again</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:3"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">100% Center coverage &middot; 3 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-a36dbc49f73b.html" data-topics="us-politics" data-biases="lean-left,center">
+            
+              <div class="cluster-thumb">
+                <img src="https://thehill.com/wp-content/uploads/sites/2/2026/08/leading_pentagon_081526_ap_alex-brandon-e1786359419742.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">1m ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Trump administration asks Supreme Court to allow military’s transgender ban</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:1"></span>
+                
+                  <span class="seg center" style="flex-grow:1"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">50% Left coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-41db71c66332.html" data-topics="us-politics,world" data-biases="right">
+            
+              <div class="cluster-thumb">
+                <img src="https://media.breitbart.com/media/2025/08/graduation-university-college-cap-and-gown-charles-deloye-unsplash-640x335.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">20h ago</span>
+              <span class="thin-pill">Thin on the left</span>
+            </div>
+            <h3 class="cluster-headline">DOJ Sues 4 More States over in-State Tuition for Illegal Aliens</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:2"></span>
+                
+              </div>
+              <span class="coverage-line">100% Right coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-9f15047c25a1.html" data-topics="us-politics,world" data-biases="center">
+            
+              <div class="cluster-thumb">
+                <img src="https://thehill.com/wp-content/uploads/sites/2/2026/07/AP26208706012094-e1787917128648.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">6h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Watch live: Trump honors Artemis II crew in Houston, calls International Space Station</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:2"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">100% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-5454ff6444dd.html" data-topics="business,us-politics,world" data-biases="center">
+            
+              <div class="cluster-thumb">
+                <img src="https://images.axios.com/4urenC6mG9DWWebqAnaQ1Kw_HCU=/377x0:1457x1080/320x320/2026/03/04/1772656960244.jpeg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">BUSINESS</span>
+              <span class="cluster-time">18h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Judge blocks Pentagon's Anthropic blacklist</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:2"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">100% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-5ed16bdea21b.html" data-topics="world" data-biases="lean-left,center">
+            
+              <div class="cluster-thumb">
+                <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/4a47/live/375be140-a2d8-11f1-aed2-8d6da8d75094.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">WORLD</span>
+              <span class="cluster-time">11h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Norway's King Harald dies aged 89: A beloved monarch buffeted by family crises</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:1"></span>
+                
+                  <span class="seg center" style="flex-grow:1"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">50% Left coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-5fce756f7375.html" data-topics="us-politics" data-biases="center,right">
+            
+              <div class="cluster-thumb">
+                <img src="https://thehill.com/wp-content/uploads/sites/2/2026/08/AP26104641517733-e1787923199752.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">7h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Trump moves to allow farmers, ranchers to process their own food</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:1"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:1"></span>
+                
+              </div>
+              <span class="coverage-line">50% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-f5297287c9fa.html" data-topics="us-politics,world" data-biases="center">
+            
+              <div class="cluster-thumb">
+                <img src="https://thehill.com/wp-content/uploads/sites/2/2026/06/AP26168684887722-e1781723314196.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">US POLITICS</span>
+              <span class="cluster-time">7h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Watch: Warsh gives key speech at Jackson Hole amid inflation, bond jitters</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:2"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">100% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-2e969662efcb.html" data-topics="asia,international-relations" data-biases="center">
+            
+              <div class="cluster-thumb">
+                <img src="https://images.thediplomat.com/v1/td-list-l-2/2026/08/thediplomat_2026-08-27-013048.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">ASIA</span>
+              <span class="cluster-time">2d ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Flash Flood Devastates China-Nepal Border Region</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:2"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">100% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-0336135d7781.html" data-topics="turkey" data-biases="lean-left,center">
+            
+              <div class="cluster-thumb">
+                <img src="https://www.turkishminute.com/wp-content/uploads/2026/08/mazloum-abdi-syria.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">TURKEY</span>
+              <span class="cluster-time">10h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Syrian president appoints former SDF commander Mazloum Abdi as adviser</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:1"></span>
+                
+                  <span class="seg center" style="flex-grow:1"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">50% Left coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-7acf8806c2cc.html" data-topics="turkey" data-biases="center,lean-right">
+            
+              <div class="cluster-thumb">
+                <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458093.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">TURKEY</span>
+              <span class="cluster-time">11h ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Serbia says war criminal Mladic to be buried with 'state honors'</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:1"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:1"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">50% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+          <a class="cluster-card" href="cluster-049ed1ffcde6.html" data-topics="business,us-politics" data-biases="center">
+            
+              <div class="cluster-thumb">
+                <img src="https://images.axios.com/LuX5HZ-_wLu3EDMNI1jsXMqhIsM=/1167x0:4277x3110/320x320/2026/08/21/1787338875238.jpeg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            
+            <div class="cluster-meta">
+              <span class="cluster-topic">BUSINESS</span>
+              <span class="cluster-time">2d ago</span>
+              
+            </div>
+            <h3 class="cluster-headline">Darline Graham wins South Carolina GOP Senate runoff</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                
+                  <span class="seg left" style="flex-grow:0"></span>
+                
+                  <span class="seg lean-left" style="flex-grow:0"></span>
+                
+                  <span class="seg center" style="flex-grow:2"></span>
+                
+                  <span class="seg lean-right" style="flex-grow:0"></span>
+                
+                  <span class="seg right" style="flex-grow:0"></span>
+                
+              </div>
+              <span class="coverage-line">100% Center coverage &middot; 2 sources</span>
+            </div>
+          </a>
+        
+      </div>
+    </section>
+
+    <aside class="river-col">
+      <div class="river-heading">
+        <h2>The river</h2>
+        <span class="river-sub">60 single reports</span>
+      </div>
+
+      
+        
+        <a class="river-item" href="article-18b59e8acbbe.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F0223%2Fr977995_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Sources: MLB suspends prospect in fake-age plot</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-54a944c09d38.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://i.guim.co.uk/img/media/d6294e52db43e0c31e4997a4b9cd874af4e646b9/968_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=206f18c943864f20ced9b25a59b3f6a1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">The Guardian</span>
+              
+            </div>
+            <h3>Large fire near Wembley Stadium disrupts tube and rail services</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-abdc36072e0e.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2FScreenshot-2026-08-28-at-52947-PM.jpg?w%3D908" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Former Red Sox catcher Rich Rowland dead at 62</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-ff4e5b888cbe.html" data-topics="us-politics,world" data-biases="right">
+          
+            <div class="river-thumb">
+              <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2023/07/931/523/Veronica-Ivy2.jpg?ve=1&tl=1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill right">right</span>
+              <span class="outlet-name">Fox News</span>
+              
+            </div>
+            <h3>Transgender Canadian golfer sends a blunt message to critics as victories over women pile up</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-1c665785e7f2.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2F2026-around-3pm-fdny-called-138818337.jpg?w%3D1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Man sets himself on fire in lobby of Google office building in Lower Manhattan</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-2f33d5ff95b3.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2Fpeople-seen-behind-logo-meta-137160531.jpg?quality%3D90%26" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>There’s reason to fear Meta’s historic $18B settlement will mostly help . . . the lawyers</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-e52a1868a8d9.html" data-topics="turkey" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458232.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">Daily Sabah</span>
+              
+            </div>
+            <h3>3 Palestinians killed in Israeli drone strike in occupied West Bank</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-c887977ae867.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2FGettyImages-2274474062.jpg?w%3D683" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Warriors star Draymond Green points out why Jonathan Kuminga’s decision to spurn Lakers ‘gets dicey’</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-92bedb1d16d8.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://i.guim.co.uk/img/media/626ffdbb76edbd528ee90a503063256bc4bba006/68_0_3748_2999/master/3748.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=00a4cc640e819392b791932af47a3ad5" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">The Guardian</span>
+              
+            </div>
+            <h3>Trump arch will alter sightlines of many Washington DC landmarks, report says</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a81ce72624fe.html" data-topics="business,finance" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://image.cnbcfm.com/api/v1/image/108284347-1774643253823-Screenshot_2026-03-27_at_41954_PM.png?v=1787952611&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">CNBC</span>
+              
+            </div>
+            <h3>U.S. appeals court rules against prediction markets, sets up likely fight at Supreme Court</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a8cc95250812.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2Fnaomi-greer-wilkinson-coma-month-138708163.jpg?w%3D632" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Parents tear Six Flags apart after deadly ride left daughter in coma: ‘Never ever in a million years’</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-3a459acdf629.html" data-topics="finance" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://images.mktw.net/im-99465391" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">MarketWatch</span>
+              
+            </div>
+            <h3>Microsoft’s stock seals its longest winning streak of the year as AI software fears fade</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-5d90b25d8122.html" data-topics="business,finance" data-biases="center">
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Bloomberg</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>IMF's Georgieva on Warsh's Speech, 'Stubborn' Inflation</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a8505a0585cf.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2Fmidwife-charged-strangling-two-children-5748384_b80d1e.jpg?w%3D1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Shrink who got into testy exchange with Lindsay Clancy’s lawyer while on the stand is ‘no longer employed’</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-5cf4ff68f1d1.html" data-topics="finance" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://images.mktw.net/im-01814240" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">MarketWatch</span>
+              
+            </div>
+            <h3>‘We are committed Christians’: Our son and daughter-in-law cut us off over politics. Should we change our $3 million will?</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-846ecb88401f.html" data-topics="world,us-politics" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://static01.nyt.com/images/2026/08/28/multimedia/28biz-chevron-venezuela-jkcp/28biz-chevron-venezuela-jkcp-mediumSquareAt3X.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">New York Times</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Chevron Is in Talks to Expand in Venezuela, a Potential Win for Trump</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-9d059088803d.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0825%2Fr1706721_2_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Is the Bill Belichick era at North Carolina already coming to a close?</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-8e3035beb60b.html" data-topics="us-politics,world" data-biases="right">
+          
+            <div class="river-thumb">
+              <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/10/931/523/portland-national-guard-troops.jpg?ve=1&tl=1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill right">right</span>
+              <span class="outlet-name">Fox News</span>
+              
+            </div>
+            <h3>New York's Erie County axes DHS job fair over ICE's role, drawing backlash: 'Totally inappropriate'</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-32d50aeb6970.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://i.guim.co.uk/img/media/4e1079ffb55d92c00ef45a5bc60b2a88b431fad4/37_0_1133_906/master/1133.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=79686197af903b9bfe9e3db45a444847" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">The Guardian</span>
+              
+            </div>
+            <h3>Volunteers rescue man stuck on 10,000-ft high ledge in Sierra Nevada range</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-d4abd89d5aa9.html" data-topics="asia" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://cdn.i-scmp.com/sites/default/files/styles/1280x720/public/d8/images/canvas/2026/08/24/31d25478-3032-4259-9150-56dd63fdf1e4_8cfc77a0.jpg?itok=1EYIMQKF&v=1787582404" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">South China Morning Post</span>
+              
+            </div>
+            <h3>US-China AI rivalry needn’t preclude cooperation</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-764228876958.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2Fpick-waves-surf-together-endless-138807859.jpg?quality%3D90%26" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Wild new tech summons dream waves for surfers after spotting them in the lineup</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-46cab11314fe.html" data-topics="world" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/85e3/live/544e16f0-a324-11f1-8d63-4fed9aaab467.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">BBC News</span>
+              
+            </div>
+            <h3>Berlin is being blackmailed by hackers, mayor says</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-b0f5d80310cd.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2022%2F0820%2Fr1050749_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Judge: SEC can't punish teams that play ex-pros</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-8433237500e9.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2024%2F1108%2Fr1412219_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Florida's Golden gets another extension and raise</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-2648da5bbb0c.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0916%2Fr746340_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Big Ten to have 4 player status reports a week</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-0c731ca006d8.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0828%2Fr1708186_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Gauff backs mother for squashing ticket requests</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-336250d24cf1.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0521%2Fr700859_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Man who posed as 49er facing federal charges</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-dc287af26fb2.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0828%2Fr1707998_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>McVay: Atwell trade not about possible Nacua ban</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-20d4a5f50b65.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0827%2Fr1707645_1296x729_16%2D9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>Returning Alcaraz giving full effort to US defense</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-98212d1e0458.html" data-topics="sports" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0826%2Fcollege%2Dfootball%2Dnational%2Dtitle_16x9.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">ESPN</span>
+              
+            </div>
+            <h3>🏈 20 CFB teams ready to win first national title</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a6a1deff52d4.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://www.aljazeera.com/wp-content/uploads/2026/08/image-1787952205.jpg?resize=1440%2C1080&quality=80" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">Al Jazeera English</span>
+              
+            </div>
+            <h3>Before and after images show catastrophic impact of Nepal flash floods</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-301968018a06.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://i.guim.co.uk/img/media/354fbd9087f6426e4a815de18580298cf136cb3d/0_73_602_482/master/602.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctbGl2ZS5wbmc&enable=upscale&s=a8850804dabb91577df6f0d9a9cbb1bf" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">The Guardian</span>
+              
+            </div>
+            <h3>Nepal-Tibet flash flood: number of missing people in Nepal rises to 1,924 – latest updates</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a892dac9278d.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://www.aljazeera.com/wp-content/uploads/2026/08/image-1787952257.jpg?resize=1467%2C1080&quality=80" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">Al Jazeera English</span>
+              
+            </div>
+            <h3>RSS chief’s US visit faces protests over Hindu nationalism</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-e03e0fc1e804.html" data-topics="business,finance" data-biases="center">
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Bloomberg</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Iran War Hits 6 Month Mark</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-af6e81888dc6.html" data-topics="world,us-politics" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://static01.nyt.com/images/2026/08/28/multimedia/28int-russia-putin-01-gwkp/28int-russia-putin-01-gwkp-mediumSquareAt3X.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">New York Times</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Why Putin Is Fighting On, Even as His Problems Multiply</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-44b57d1813db.html" data-topics="world,us-politics" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://d3i6fh83elv35t.cloudfront.net/static/2026/08/GettyImages-1475423357-1024x683.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">PBS NewsHour</span>
+              
+            </div>
+            <h3>Why the tween years are a good time to talk to your kids about AI</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-d1a2d161b196.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://i.guim.co.uk/img/media/7efdc28db9c1a4c1c6c77efdf85563ba6c86bea0/0_0_2575_2059/master/2575.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctbGl2ZS5wbmc&enable=upscale&s=944d1efd0d62db7527dc36209202999a" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">The Guardian</span>
+              
+            </div>
+            <h3>National Park Service supports Trump’s arch even though it would have ‘adverse effects’ on other DC monuments, report says – live</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-6317b64a0cc5.html" data-topics="turkey" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458231.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">Daily Sabah</span>
+              
+            </div>
+            <h3>Türkiye rejects legal impact of Greek spatial plan in Aegean</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-65b2ce49afea.html" data-topics="business,finance" data-biases="center">
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Bloomberg</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Billionaire Gilinski, GeoPark Said to Be Near Venezuela Oil Deal</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a974da47a585.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2Fdaejon-labrayae-love-man-accused-138701556.jpg?w%3D1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>How 49ers fraudster dragged NFL stars Jordan Love and Tyreek Hill into wild $1.3 million scam</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-5075dd5824c7.html" data-topics="business,finance" data-biases="center">
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Bloomberg</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Tariffs Could Bring Canada Auto "To Its Knees"</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-61e44c76636c.html" data-topics="world" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/983c/live/3900eaa0-a318-11f1-aed2-8d6da8d75094.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">BBC News</span>
+              
+            </div>
+            <h3>97-year-old woman rescued after Nepali floods looked like 'a warrior'</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-b3be541c5015.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2F138807957.jpg?w%3D1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>BMW driver smashes, flips NYPD cruiser — and injures 2 cops, video shows</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a34c755ac855.html" data-topics="world,us-politics" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://d3i6fh83elv35t.cloudfront.net/static/2026/08/2026-08-04T094621Z_2055939036_RC2CULAL037V_RTRMADP_3_HEALTH-EBOLA-WHO-1024x683.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">PBS NewsHour</span>
+              
+            </div>
+            <h3>Ebola outbreak in Congo spreads to 2 new health zones, bringing total to 60 areas affected</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-878e134f00b5.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2Flos-angeles-lakers-guard-luka-120243912.jpg?w%3D915" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Reassessing — and grading — Lakers’ tumultuous offseason</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-a9b61fced2b2.html" data-topics="us-politics,world" data-biases="right">
+          
+            <div class="river-thumb">
+              <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/08/931/523/rory-mcilroy-tour-championship-atlanta_002.jpg?ve=1&tl=1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill right">right</span>
+              <span class="outlet-name">Fox News</span>
+              
+            </div>
+            <h3>Rory McIlroy makes embarrassing mistake in $10 million tournament, announcer rips him for being too 'cute'</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-950268e5f092.html" data-topics="business,finance" data-biases="center">
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Bloomberg</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Por qué EE.UU. está detrás de una parte del petróleo de Venezuela</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-3ed0fdabdb30.html" data-topics="business,finance" data-biases="center">
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Bloomberg</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Odd Lots: What’s Behind the Classic Jackson Hole Photo Op?</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-c0ae664b8e00.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://pagesix.com/wp-content%2Fuploads%2Fsites%2F3%2F2026%2F08%2Fexclusive-lake-como-italy-george-138675380.jpg?w%3D682" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Amal Clooney goes slinky in white slip dress with George for Lake Como date night</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-7d7dc2c84fcf.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2F082726marisolmiranda22MATT-e1787945506929.jpg?quality%3D90%26" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Mamdani’s condolences for a murderer: Letters to the Editor — Aug. 29, 2026</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-e1a8c8bfc39d.html" data-topics="business,finance" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://image.cnbcfm.com/api/v1/image/108355745-1787924027969-Meta_Platforms_Photo_Illustrations-2291623801-Getty.jpg?v=1787924160&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">CNBC</span>
+              
+            </div>
+            <h3>Meta's $17 billion settlement mandates new safeguards for kids—many are promising, says safety expert</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-0377fa18b841.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2FPhair-Sleater-Kinney.jpg?quality%3D90%26" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Liz Phair is going on tour with Sleater-Kinney. How much are tickets?</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-b6c451f9bf59.html" data-topics="international-relations" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://foreignpolicy.com/wp-content/uploads/2026/08/IcelandReferendum-GettyImages-2291604977.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">Foreign Policy</span>
+              <span class="paywall-tag">paywalled</span>
+            </div>
+            <h3>Iceland’s EU Ambitions</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-482b034b87c4.html" data-topics="turkey" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458021.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">Daily Sabah</span>
+              
+            </div>
+            <h3>Israel’s 'Qualitative Edge' means everyone else's vulnerability</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-797261ffe7d0.html" data-topics="turkey" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458066.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">Daily Sabah</span>
+              
+            </div>
+            <h3>Trajectory of astronomy-philosophy relationship in Islamic world</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-c6ff83bd389e.html" data-topics="turkey" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458103.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">Daily Sabah</span>
+              
+            </div>
+            <h3>Neither invaders nor guests: Rethinking India’s Muslim story</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-10fed05e6bc1.html" data-topics="turkey" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2026/08/28/458092.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">Daily Sabah</span>
+              
+            </div>
+            <h3>New regional era beyond terror</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-3d5f11a7e8f2.html" data-topics="world" data-biases="lean-left">
+          
+            <div class="river-thumb">
+              <img src="https://www.aljazeera.com/wp-content/uploads/2026/08/image-1787950888.jpg?resize=1920%2C1080&quality=80" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-left">lean-left</span>
+              <span class="outlet-name">Al Jazeera English</span>
+              
+            </div>
+            <h3>8-year-old Nepal flood survivor reunited with mother after rescue</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-03ee78421a19.html" data-topics="us-politics" data-biases="lean-right">
+          
+            <div class="river-thumb">
+              <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F08%2F138786750-1.jpg?w%3D1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill lean-right">lean-right</span>
+              <span class="outlet-name">New York Post</span>
+              
+            </div>
+            <h3>Anti-ICE activist’s arrest for voter fraud reinforces need for Proposition 39</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+        
+        <a class="river-item" href="article-b71459075244.html" data-topics="us-politics" data-biases="center">
+          
+            <div class="river-thumb">
+              <img src="https://thehill.com/wp-content/uploads/sites/2/2026/03/AP26059166412662-e1773753503361.jpg?w=900" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill center">center</span>
+              <span class="outlet-name">The Hill</span>
+              
+            </div>
+            <h3>Crockett suggests she won’t campaign with Talarico, will focus ‘down ballot’</h3>
+            <div class="river-sub-line">1m ago</div>
+          </div>
+        </a>
+      
+    </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
