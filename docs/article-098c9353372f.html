@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple hikes subscription prices for Apple TV and Apple One in the U.S.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">CNBC</span>
+    </div>
+    <h1>Apple hikes subscription prices for Apple TV and Apple One in the U.S.</h1>
+    <p class="hint">2026-08-28 20:09</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://image.cnbcfm.com/api/v1/image/108355851-1787936063724-Ted_Lasso_Photo_040303.jpg?v=1787936142&w=1920&h=1080" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>Apple on Friday increased the monthly price of Apple TV, its streaming service, to $14.99, or $119 per year. It was previously $12.99 per month, or $99 per year.</p><p>Apple TV is included in Apple One, a bundle subscription that also includes iCloud storage, Apple Music and other services. The individual price for Apple One increased to $21.95 from $19.95.</p><p>The price hike puts Apple TV's price closer to rival streaming services. When Apple TV first launched in 2019, as Apple TV+, it cost $4.99 per month, lower than nearly all of its rivals.</p><p>But Apple TV has added a significant amount of content since then, including "F1," a major summer blockbuster, and "Ted Lasso," a comedy series that returned for a fourth season earlier this month.</p><p>The adjustments come after Apple raised prices for Apple Music by $1 per month in July, citing licensing costs.</p><p>Apple reported $30.7 billion in services revenue, or 12% growth, in its third quarter, although the unit's gross margin was down over 1% sequentially, which the company blamed on a different mix of products and foreign exchange headwinds.</p><p>In Apple's announcement that Tim Cook would step down as CEO on Sept. 1, it mentioned that services had been a "major focus area" during his tenure.</p>
+      </div>
+    
+
+    
+  </article>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>

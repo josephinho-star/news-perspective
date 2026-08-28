@@ -6,6 +6,7 @@ the local dev news.db), eagerly extracts full text and images for every
 article that will get its own page, then renders flat HTML files with
 Jinja2 directly — no server involved at request time.
 """
+import hashlib
 import os
 import shutil
 import sys
@@ -34,6 +35,22 @@ from app.sources import BIAS_COLORS, BIAS_ORDER, BIAS_SHORT, TOPICS
 from app.textutil import clean_paragraphs, time_ago
 
 DOCS_DIR = ROOT / "docs"
+
+
+def article_slug(url: str) -> str:
+    """Stable filename derived from the article's own URL.
+
+    The build DB is a fresh throwaway per run, so its autoincrement ids are
+    not stable across rebuilds — using them for filenames meant every
+    3-hourly rebuild silently deleted/renamed previously-linked article
+    pages, breaking any tab or bookmark left open from an older build.
+    """
+    return hashlib.sha1(url.encode("utf-8")).hexdigest()[:12]
+
+
+def cluster_slug(card: dict) -> str:
+    member_urls = sorted(a.url for a in card["members"])
+    return hashlib.sha1("|".join(member_urls).encode("utf-8")).hexdigest()[:12]
 
 
 def main() -> None:
@@ -101,6 +118,9 @@ def main() -> None:
         now = datetime.now()
         build_time = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
 
+        article_slugs = {a.id: article_slug(a.url) for a in linked_articles.values()}
+        cluster_slugs = {cid: cluster_slug(card) for cid, card in clusters_by_id.items()}
+
         env = jinja2.Environment(loader=jinja2.FileSystemLoader(str(ROOT / "app" / "templates")))
         env.filters["time_ago"] = time_ago
         env.globals.update({
@@ -111,8 +131,8 @@ def main() -> None:
             "STATIC": True,
             "build_time": build_time,
             "url_home": lambda: "index.html",
-            "url_article": lambda article_id: f"article-{article_id}.html",
-            "url_cluster": lambda cluster_id: f"cluster-{cluster_id}.html",
+            "url_article": lambda article_id: f"article-{article_slugs[article_id]}.html",
+            "url_cluster": lambda cluster_id: f"cluster-{cluster_slugs[cluster_id]}.html",
         })
 
         if DOCS_DIR.exists():
@@ -145,7 +165,7 @@ def main() -> None:
 
         cluster_tpl = env.get_template("cluster.html")
         for cid, card in clusters_by_id.items():
-            (DOCS_DIR / f"cluster-{cid}.html").write_text(cluster_tpl.render(
+            (DOCS_DIR / f"cluster-{cluster_slugs[cid]}.html").write_text(cluster_tpl.render(
                 cluster=card, sources=sources, bias_order=BIAS_ORDER,
             ))
 
@@ -153,7 +173,7 @@ def main() -> None:
         for article in linked_articles.values():
             source = sources[article.source_id]
             paragraphs = clean_paragraphs(article.content, article.title) if article.content else []
-            (DOCS_DIR / f"article-{article.id}.html").write_text(article_tpl.render(
+            (DOCS_DIR / f"article-{article_slugs[article.id]}.html").write_text(article_tpl.render(
                 article=article, source=source, paragraphs=paragraphs,
                 analysis=None, analysis_configured=False,
             ))
