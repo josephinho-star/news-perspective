@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% block title %}Meridian — your follows, read across the spectrum{% endblock %}
+
+{% block header %}
+<header class="masthead">
+  <div class="masthead-top">
+    <div class="date-stack">
+      <span>{{ day_abbr }}</span>
+      <span>{{ day_num }}</span>
+      <span>{{ month_abbr }}</span>
+      <span>{{ year }}</span>
+    </div>
+    <div class="story-count">
+      <span class="num">{{ clusters|length + river_articles|length }}</span>
+      <span>stories</span>
+    </div>
+    <div class="brand-block">
+      <a class="brand" href="/">MERIDIAN</a>
+      <div class="tagline">Your follows, read across the spectrum</div>
+    </div>
+    <div class="masthead-actions">
+      <input type="text" class="search-input" placeholder="Search headlines, outlets" disabled title="Search isn't wired up yet">
+      <button class="btn night-toggle" id="nightToggle" type="button">☾ Night</button>
+    </div>
+  </div>
+
+  <div class="following-row">
+    <span class="row-label">Following</span>
+    {% for slug, label in all_topics %}
+      <form method="post" action="/topics/toggle" class="chip-form">
+        <input type="hidden" name="slug" value="{{ slug }}">
+        <input type="hidden" name="next" value="/{{ '?bias=' + current_bias if current_bias else '' }}">
+        <button type="submit" class="chip {{ '' if slug in followed_slugs else 'off' }}">
+          {% if slug in followed_slugs %}✓ {% endif %}{{ label }}
+        </button>
+      </form>
+    {% endfor %}
+  </div>
+
+  <div class="bias-filter-row">
+    <span class="row-label">Bias filter</span>
+    {% for code in bias_order %}
+      <a class="bias-chip {{ code }} {{ 'active' if current_bias == code else '' }}" href="/?bias={{ code }}">{{ BIAS_SHORT[code] }}</a>
+    {% endfor %}
+    <a class="all-leans {{ 'active' if not current_bias else '' }}" href="/">All leans</a>
+    <form method="post" action="/refresh" class="refresh-form">
+      <button class="text-btn" type="submit">Refresh feed</button>
+    </form>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+  {% if not has_followed %}
+    <p class="hint">You're not following any topics yet, so everything is shown. <a href="/topics">Pick your topics</a>.</p>
+  {% endif %}
+
+  {% if barely_left or barely_right or barely_anyone %}
+  <section class="blindspots-panel">
+    <div class="blindspots-head">
+      <h2>Blindspots today</h2>
+      <span class="blindspots-sub">Stories one side of the spectrum has left almost untouched.</span>
+    </div>
+    <div class="blindspots-grid">
+      {% if barely_left %}
+      <a class="blindspot-item" href="/cluster/{{ barely_left.id }}">
+        <span class="blindspot-label left">Barely covered by the left</span>
+        <h4>{{ barely_left.headline }}</h4>
+        <span class="blindspot-meta">{{ barely_left.source_count }} sources &middot; {{ barely_left.right_count }} right-of-centre</span>
+      </a>
+      {% endif %}
+      {% if barely_right %}
+      <a class="blindspot-item" href="/cluster/{{ barely_right.id }}">
+        <span class="blindspot-label right">Barely covered by the right</span>
+        <h4>{{ barely_right.headline }}</h4>
+        <span class="blindspot-meta">{{ barely_right.source_count }} sources &middot; {{ barely_right.left_count }} left-of-centre</span>
+      </a>
+      {% endif %}
+      {% if barely_anyone %}
+      <a class="blindspot-item" href="/cluster/{{ barely_anyone.id }}">
+        <span class="blindspot-label anyone">Barely covered by anyone</span>
+        <h4>{{ barely_anyone.headline }}</h4>
+        <span class="blindspot-meta">{{ barely_anyone.source_count }} sources &middot; smallest cluster today</span>
+      </a>
+      {% endif %}
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="content-grid">
+    <section class="clusters-col">
+      <div class="river-heading">
+        <h2>Story clusters</h2>
+        <span class="river-sub">One event, every outlet covering it</span>
+      </div>
+
+      {% if not clusters %}
+        <p class="hint">No multi-outlet stories yet for your follows in the last few days. Check back after a few more fetch cycles.</p>
+      {% endif %}
+
+      <div class="cluster-grid">
+        {% for c in clusters %}
+          <a class="cluster-card" href="/cluster/{{ c.id }}">
+            {% if c.image_url %}
+              <div class="cluster-thumb">
+                <img src="{{ c.image_url }}" alt="" loading="lazy" onerror="this.parentElement.remove()">
+              </div>
+            {% endif %}
+            <div class="cluster-meta">
+              <span class="cluster-topic">{{ TOPIC_LABELS.get(c.primary_topic, c.primary_topic)|upper }}</span>
+              <span class="cluster-time">{{ c.age }}</span>
+              {% if c.thin_side %}<span class="thin-pill">Thin on the {{ c.thin_side }}</span>{% endif %}
+            </div>
+            <h3 class="cluster-headline">{{ c.headline }}</h3>
+
+            <div class="spectrum-block">
+              <div class="spectrum-bar">
+                {% for label in bias_order %}
+                  <span class="seg {{ label }}" style="flex-grow:{{ c.counts[label] }}"></span>
+                {% endfor %}
+              </div>
+              <span class="coverage-line">{{ c.dominant_pct }}% {{ c.dominant_label|capitalize }} coverage &middot; {{ c.source_count }} sources</span>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <aside class="river-col">
+      <div class="river-heading">
+        <h2>The river</h2>
+        <span class="river-sub">{{ river_articles|length }} single reports</span>
+      </div>
+
+      {% for article in river_articles %}
+        {% set source = sources[article.source_id] %}
+        <a class="river-item" href="/article/{{ article.id }}">
+          {% if article.image_url %}
+            <div class="river-thumb">
+              <img src="{{ article.image_url }}" alt="" loading="lazy" onerror="this.parentElement.remove()">
+            </div>
+          {% endif %}
+          <div class="river-item-body">
+            <div class="river-meta">
+              <span class="bias-pill {{ source.bias_label }}">{{ source.bias_label }}</span>
+              <span class="outlet-name">{{ source.name }}</span>
+              {% if source.paywalled %}<span class="paywall-tag">paywalled</span>{% endif %}
+            </div>
+            <h3>{{ article.title }}</h3>
+            <div class="river-sub-line">{{ article.published_at|time_ago }}</div>
+          </div>
+        </a>
+      {% endfor %}
+    </aside>
+  </div>
+{% endblock %}

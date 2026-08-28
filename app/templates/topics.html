@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Follow topics{% endblock %}
+{% block content %}
+  <h2>Follow topics</h2>
+  <p class="hint">Pick what you want in your feed. Leave everything unchecked to see all topics.</p>
+  <form method="post" action="/topics" class="topic-form">
+    {% for slug, label in topics %}
+      <label class="topic-option">
+        <input type="checkbox" name="topic" value="{{ slug }}" {% if followed_map.get(slug) %}checked{% endif %}>
+        {{ label }}
+      </label>
+    {% endfor %}
+    <button class="btn primary" type="submit">Save</button>
+  </form>
+{% endblock %}
