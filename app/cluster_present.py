@@ -2,6 +2,27 @@ from .sources import BIAS_ORDER
 from .textutil import time_ago
 
 
+def build_related(candidates: list, sources: dict, current, limit: int = 6) -> list:
+    """Pick recent articles sharing a topic with `current`, newest first."""
+    my_topics = set(current.topics.split(","))
+    related = []
+    for a in candidates:
+        if a.id == current.id:
+            continue
+        if not (set(a.topics.split(",")) & my_topics):
+            continue
+        related.append({
+            "id": a.id,
+            "title": a.title,
+            "image_url": a.image_url,
+            "bias_label": sources[a.source_id].bias_label,
+            "outlet": sources[a.source_id].name,
+        })
+        if len(related) >= limit:
+            break
+    return related
+
+
 def build_cluster_card(cluster_id: int, members: list, sources: dict) -> dict:
     """members: Article rows sharing a cluster_id. sources: {source_id: Source}."""
 

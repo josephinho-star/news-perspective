@@ -12,7 +12,7 @@ from fastapi.templating import Jinja2Templates
 from sqlmodel import Session, select
 
 from .analyzer import analyze_article, is_configured
-from .cluster_present import build_cluster_card
+from .cluster_present import build_cluster_card, build_related
 from .clustering import WINDOW_HOURS, assign_clusters
 from .database import get_session, init_db
 from .fetcher import fetch_all_sources
@@ -53,7 +53,9 @@ app.mount("/static", NoCacheStaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 templates.env.globals["BIAS_COLORS"] = BIAS_COLORS
 templates.env.globals["BIAS_SHORT"] = BIAS_SHORT
+templates.env.globals["BIAS_ORDER"] = BIAS_ORDER
 templates.env.globals["TOPIC_LABELS"] = dict(TOPICS)
+templates.env.globals["TOPICS"] = TOPICS
 templates.env.globals["css_href"] = f"/static/style.css?v={int(os.path.getmtime(Path('app/static/style.css')))}"
 templates.env.globals["STATIC"] = False
 templates.env.globals["url_home"] = lambda: "/"
@@ -63,9 +65,11 @@ templates.env.filters["time_ago"] = time_ago
 
 
 @app.get("/")
-def index(request: Request, bias: str = "", session: Session = Depends(get_session)):
+def index(request: Request, bias: str = "", topic: str = "", session: Session = Depends(get_session)):
     followed_rows = session.exec(select(FollowedTopic)).all()
     followed = {f.topic_slug for f in followed_rows if f.followed}
+    if topic:
+        followed = {topic}
 
     sources = {s.id: s for s in session.exec(select(Source)).all()}
 
@@ -195,6 +199,13 @@ def article_page(article_id: int, request: Request, session: Session = Depends(g
     paragraphs = clean_paragraphs(article.content, article.title) if article.content else []
     analysis = session.get(Analysis, article_id)
 
+    sources = {s.id: s for s in session.exec(select(Source)).all()}
+    cutoff = datetime.utcnow() - timedelta(hours=WINDOW_HOURS)
+    candidates = session.exec(
+        select(Article).where(Article.published_at >= cutoff).order_by(Article.published_at.desc())
+    ).all()
+    related = build_related(candidates, sources, article)
+
     return templates.TemplateResponse(
         "article.html",
         {
@@ -204,6 +215,7 @@ def article_page(article_id: int, request: Request, session: Session = Depends(g
             "paragraphs": paragraphs,
             "analysis": analysis,
             "analysis_configured": is_configured(),
+            "related": related,
         },
     )
 

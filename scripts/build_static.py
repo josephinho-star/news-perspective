@@ -25,7 +25,7 @@ os.environ["NEWS_DB_PATH"] = str(_tmp_dir / "build.db")
 import jinja2
 from sqlmodel import Session, select
 
-from app.cluster_present import build_cluster_card
+from app.cluster_present import build_cluster_card, build_related
 from app.clustering import WINDOW_HOURS, assign_clusters
 from app.database import engine, init_db
 from app.fetcher import fetch_all_sources
@@ -126,7 +126,9 @@ def main() -> None:
         env.globals.update({
             "BIAS_COLORS": BIAS_COLORS,
             "BIAS_SHORT": BIAS_SHORT,
+            "BIAS_ORDER": BIAS_ORDER,
             "TOPIC_LABELS": dict(TOPICS),
+            "TOPICS": TOPICS,
             "css_href": "static/style.css",
             "STATIC": True,
             "build_time": build_time,
@@ -170,12 +172,16 @@ def main() -> None:
             ))
 
         article_tpl = env.get_template("article.html")
+        linkable = sorted(
+            linked_articles.values(), key=lambda a: a.published_at or a.fetched_at, reverse=True
+        )
         for article in linked_articles.values():
             source = sources[article.source_id]
             paragraphs = clean_paragraphs(article.content, article.title) if article.content else []
+            related = build_related(linkable, sources, article)
             (DOCS_DIR / f"article-{article_slugs[article.id]}.html").write_text(article_tpl.render(
                 article=article, source=source, paragraphs=paragraphs,
-                analysis=None, analysis_configured=False,
+                analysis=None, analysis_configured=False, related=related,
             ))
 
     total_pages = 1 + len(clusters_by_id) + len(linked_articles)

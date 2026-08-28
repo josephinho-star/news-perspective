@@ -11,6 +11,20 @@
 
   var biasFilter = "";
 
+  // links from the article page sidebar ("?topic=world" / "?bias=left")
+  // arrive as a query string even on a static host, since it never leaves
+  // the browser — pick them up and apply them like a manual chip click.
+  try {
+    var params = new URLSearchParams(location.search);
+    var topicParam = params.get("topic");
+    var biasParam = params.get("bias");
+    if (topicParam) {
+      followed = [topicParam];
+      localStorage.setItem(TOPIC_KEY, JSON.stringify(followed));
+    }
+    if (biasParam) biasFilter = biasParam;
+  } catch (e) {}
+
   function allTopicSlugs() {
     return Array.prototype.map.call(document.querySelectorAll(".topic-toggle"), function (b) {
       return b.dataset.topic;
@@ -90,6 +104,13 @@
     });
   });
 
+  function renderBiasChips() {
+    Array.prototype.forEach.call(document.querySelectorAll(".bias-chip, .all-leans"), function (b) {
+      b.classList.toggle("active", (b.dataset.bias || "") === biasFilter);
+    });
+  }
+
   renderTopicChips();
+  renderBiasChips();
   applyFilters();
 })();

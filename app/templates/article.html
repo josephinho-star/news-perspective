@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }}{% endblock %}
 {% block content %}
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="{{ url_home() }}">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    {% for slug, label in TOPICS %}
+      <a class="side-link" href="{{ url_home() }}?topic={{ slug }}">{{ label }}</a>
+    {% endfor %}
+
+    <span class="side-heading">Bias lens</span>
+    {% for code in BIAS_ORDER %}
+      <a class="side-link bias-link" href="{{ url_home() }}?bias={{ code }}">
+        <span class="bias-dot" style="background:{{ BIAS_COLORS[code] }}"></span>{{ BIAS_SHORT[code] }} &middot; {{ code|replace('-', ' ')|capitalize }}
+      </a>
+    {% endfor %}
+  </aside>
+
   <article class="reader">
     <a class="back" href="{{ url_home() }}">&larr; Back to feed</a>
     <div class="river-meta">
@@ -64,4 +81,24 @@
     </div>
     {% endif %}
   </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    {% for r in related %}
+      <a class="related-item" href="{{ url_article(r.id) }}">
+        {% if r.image_url %}
+          <div class="related-thumb">
+            <img src="{{ r.image_url }}" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        {% endif %}
+        <div class="related-body">
+          <span class="bias-pill sm {{ r.bias_label }}">{{ r.bias_label }}</span>
+          <h4>{{ r.title }}</h4>
+        </div>
+      </a>
+    {% else %}
+      <p class="hint">No related stories right now.</p>
+    {% endfor %}
+  </aside>
+  </div>
 {% endblock %}
