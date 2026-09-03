@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google’s latest AI weather model gives you no excuse to forget your umbrella</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">TechCrunch</span>
+    </div>
+    <h1>Google’s latest AI weather model gives you no excuse to forget your umbrella</h1>
+    <p class="hint">2026-09-03 15:00</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://techcrunch.com/wp-content/uploads/2026/09/2-Figure-How-WeatherNext-3-works.png?resize=1200,675" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>Scientists at Google Deepmind and Google Research released a new artificial intelligence model for weather forecasting today that sees our changing atmosphere more clearly and predicts its behavior more often.</p><p>WeatherNext 3 is the latest wave of a sea change in meteorology brought out by deep learning techniques, and Google says it will start feeding into weather information users see in search, Google Maps, and Gemini, as well as being available to users and researchers on Google’s cloud platforms.</p><p>“This is going to be the first time that some of the core variables feed and power a lot of the Google products,” Samier Merchant, a Google senior staff engineer, told TechCrunch.</p><p>The new model has already proven to be the most accurate among leading contenders tested on Operational WeatherBench, a utility for comparing AI forecasts built by the startup Brightband. It looks at metrics like temperature, windspeed, and humidity.</p><p>As well as beating out other deep-learning models built by Google, Microsoft, Nvidia, and the European Center for Medium-Range Weather Forecasting, it also beats traditional forecasts from the US National Weather service and the ECMWF.</p><p>Most weather forecasts come from government-owned supercomputers laboriously churning through mathematical equations written to describe the physics of weather; while these systems have become remarkably accurate, they are expensive and comparatively slow. After the ECMWF released more than half a century of weather data produced by these systems in 2018, deep learning researchers began training models that could make predictions far more quickly and with comparable accuracy to government tools.</p><p>“Weather is chaotic, and so small differences really start to perturb massively…Machine learning targets the problem we are really solving, which is approximate noisy physics from incomplete information and finite compute, and so it learns patterns from a lot of data,” Ferran Alet, a staff research scientist manager at DeepMind.</p><p>Since then, model-makers have pushed on the key weaknesses of AI forecasting models: They tend to forecast over a wider area—15 to 25 square km—than is truly useful, they’re not always great with rain, and they still depend on the formatted data-sets produced by government agencies.</p><p>WeatherNext 3 takes on all three challenges. On key variables, researchers told TechCrunch, it can predict down to a resolution of 5km. Its evaluations on rain are 60% improved over WeatherNext 2, and it can now produce hourly forecasts, instead of the standard prediction every six hours.</p><p>Those improvements are the result of specific choices made by the designers. WeatherNext 3 is a larger model, with 2.4 times more parameters than its predecessor, and tailoring the targets for the decoder heads to give more useful answers. While most weather forecasts output as metrics averaged across a 3D grid, DeepMind researchers have already won plaudits by tuning their model to also visualize cyclone paths.</p><p>This time around, the designers also trained the model to target its forecasts to specific weather data stations. This is important not only for offering more granular predictions, but also for being able to evaluate its work against specific, ground-truth data.</p><p>“The idea, with a lot of AI applications, is to try to run tasks as end-to-end as possible,” Daniel Rothenberg, an atmospheric scientist at Brightband, said. “Adding a capability where this model is now also predicting, say, what Denver’s airport’s weather station is going to measure on an hourly basis, just connects that forecasting task closer to the core.”</p><p>The model is able to forecast more frequently because it can ingest weather satellite data collected in real-time on an hourly basis. Feeding AI models on raw empirical observations, rather than the analysis produced by weather supercomputers, promises a more accurate forecast, but it is still technically challenging to get models to work with unformatted data.</p><p>Google says WeatherNext 3 is the “first” AI model to directly incorporate raw observations for a high-resolution global forecast, but the AI weather startup WindBorne says its model, WeatherMesh 6, has been incorporating raw observations from its fleet of weather balloons and other sources since late 2025. Asked about that, Google pointed out that its forecasts are higher resolution across the globe. Regardless, both models still rely on national weather datasets to perform forecasts, so more work will be required for true direct data assimilation.</p><p>While LLMs get the bulk of the attention, the transformer revolution in meteorology has been just as important. European and US weather agencies are already using AI models in their forecast products, and their speed and low cost promise to bring economic impact to poorer regions where the expense of high-quality sensors and supercomputers has put accurate forecasts out of reach.</p><p>Bill Gates recently cited AI-powered weather forecasting as a crucial benefit of the technology, with better forecasts improving crop yields in developing countries. Alet, the DeepMind researcher, said that higher-resolution forecasts of wind, rain, and cloud cover will be useful to make renewable energy projects more dependable.</p><p>“At the end of the day, I think Google is about providing useful information to the user, and a lot of what users are looking for has to do with the weather in some way or another,” Alet said.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-6bd954d31be8.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108348539-1786548799718-108348539-1786548734234-gettyimages-2289681325-LONDIAN_WASON_IPO.jpg?v=1786548808&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Dow rises 400 points as Treasury yields fall on lower Fed rate hike expectations: Live updates</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-2e4dfc1008fe.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/107375771-1708456916246-gettyimages-1230794654-BLACK_EPSTEIN.jpeg?v=1771952856&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Leon Black sues House Oversight over Epstein probe subpoenas, won't appear Thursday</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-0ab3b0e32fad.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24016886/STK093_Google_03.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Google says its AI weather model is getting better</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-b35b41a8dd57.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/dysonhair1.jpg?quality=90&strip=all&crop=0%2C10.740836125969%2C100%2C78.518327748063&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Dyson’s new straightener has liquid cooling pipes to reduce hair damage</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-a0f5f526129b.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108343877-1785771031007-gettyimages-1663179404-AI_CEOs_555_091323.jpeg?v=1785771160&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Hugging Face approached Nvidia’s Huang weeks ahead of $12.9B acquisition, CEO tells CNBC</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-9f4d5c93733c.html">
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Odd Lots: What the Fed Needs to Do to Shrink Its Balance Sheet</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
