@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI’s rogue agents keep escaping, with no formal process to investigate them</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">TechCrunch</span>
+    </div>
+    <h1>OpenAI’s rogue agents keep escaping, with no formal process to investigate them</h1>
+    <p class="hint">2026-09-04 23:15</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://techcrunch.com/wp-content/uploads/2026/05/ai-agents-GettyImages-2229880232.jpg?resize=1200,675" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>OpenAI is at the center of another agent swarm incident. Researchers say the company’s internally deployed agents took over an obscure German-language wiki in May and June, using it to coordinate on evaluations and swap methods to evade OpenAI’s own controls (OpenAI has not yet confirmed the swarm came from the company).</p><p>The revelation surfaces days after METR and Redwood Research published their account of July’s Hugging Face breach. In July, a swarm of OpenAI agents worked together to escape their sandbox during a cybersecurity evaluation and break into Hugging Face’s servers. A subsequent swarm then picked up techniques from the first and used them to gain administrator access to a research cluster within OpenAI’s own infrastructure. OpenAI brought in METR and Redwood to investigate the Hugging Face portion of the incident, but the scope of their investigation stopped short of the compromise of OpenAI’s own infrastructure.</p><p>When an AI agent breaks out of its intended constraints, who is responsible for figuring out what happened and why? Right now, the answer is: whoever the lab decides to let in, on whatever terms it decides to set.</p><p>Now, as another incident comes to light — in the aftermath of similar episodes involving models from Meta and Anthropic — AI safety researchers are arguing with greater urgency that serious incidents should result in independent post-incident investigations rather than leaving it up to the labs to determine when outsiders are brought in and what they are allowed to examine.</p><p>“The results are fundamentally difficult to control and have significant risk of leaking out of the lab,” Jacob Steinhardt, founder and CEO of nonprofit research lab Transluce, said Wednesday during an AI safety media briefing. “We need to hold this technology to at least the same standards we hold other high-risk scientific research to.”</p><p>While it’s laudable that OpenAI invited METR and Redwood to investigate the Hugging Face incident at all, many say the inquiry was too narrow. Three investigators spent six days at OpenAI’s offices examining an investigation period limited to roughly the week ending July 13. Crucially, OpenAI’s infrastructure compromise continued beyond July 13 and was not examined.</p><p>Researchers at METR said that each time they returned, their understanding of the events “substantially deepened,” causing them to significantly expand and revise the report. That raises the question of what else they might they have found in a broader investigation.</p><p>When asked if further investigation of that incident was in the works, researchers at Redwood and METR declined to comment, and OpenAI did not respond to repeated inquiries.</p><p>“Overall, it was difficult to get a precise understanding of events and we were missing aspects of the story that we now think of as key until almost the end of our investigation,” Ryan Greenblatt, chief scientist at Redwood, noted in a social media post about the affair.</p><p>Steinhardt emphasized that current incidents show that the industry needs “systematic behavioral investigations” and “more independent post-incident analysis.”</p><p>“These recent hacking incidents are a reminder that capability scales fast, and so oversight has to scale, too,” Steinhardt said. “Beyond the technology itself, we also need more independent access and oversight from third parties.”</p><p>The calls to action come as OpenAI releases Astra, its most powerful and capable AI model — and one that safety experts are concerned will be more of a black box due to a reasoning technique that makes the model’s chain of thought more difficult to monitor.</p><p>Unfortunately, the law doesn’t yet call for the types of independent audits that other industries require — for example, when it comes to aviation accidents and serious chemical releases, there’s the National Transportation Safety Board and Chemical Safety Board, respectively.</p><p>State lawmakers have only just begun requiring frontier AI companies to report certain serious safety incidents and, in some cases, undergo independent audits. But none of the three major frontier AI safety laws in California, New York, or Illinois clearly mandate the equivalent of an independent accident investigation triggered by incidents like these.</p><p>“Right now, most of the laws we have on the books only require a plain-language summary of incidents like this, and they don’t give any authority for the governments to ask follow-up questions, to send in investigators, to have access to records, or require that they be preserved,” Mackenzie Arnold, managing director of US law and policy at LawAI, said during the media briefing Wednesday. “And that’s all that you would want to actually make sense of this.”</p><p>Lawmakers are beginning to question the scope and transparency of OpenAI’s response. This week, Reps. Josh Gottheimer (D-NJ) and Mike Lawler (R-NY) introduced a bill aimed at securing rogue AI agents. Rep. Greg Casar (D-TX) this week told OpenAI in a letter that he is “deeply concerned about the limited scope” of the investigation into the Hugging Face hacking incident.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-8c6a7b846b1d.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108358739-1788477286763-gettyimages-510370535-Huty1990301.jpeg?v=1788477378&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>A living room unlike any other—how to gather and connect like Gloria Steinem, says expert</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-266031deb404.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/06/DSC_2479.jpg?resize=1200,800" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-3ee62c9aa743.html">
+        
+          <div class="related-thumb">
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2026/09/Mercury_Transfer_Module_separation-500x500.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>After 8 years, Europe's BepiColombo mission is on final approach to Mercury</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-94113f72b4a6.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108359054-1788539004389-gettyimages-2243992399-z92_2885_82jmbmkz.jpeg?v=1788539030&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Longtime Fox News host Maria Bartiromo disputes reports of termination</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-5131caaa5414.html">
+        
+          <div class="related-thumb">
+            <img src="https://images.axios.com/3aOk1wN9WIP3JnUJx4w6ABIYq9o=/591x0:4327x3736/320x320/2026/09/03/1788456265225.jpeg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Maria Bartiromo fired by Fox</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-7aac2e2181b0.html">
+        
+          <div class="related-thumb">
+            <img src="https://images.axios.com/_pz8ySCAo4-XAWB6emyIBZ4_sXI=/1468x0:6465x4997/320x320/2026/09/03/1788469726382.jpeg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>House Democrat says his phone calls with a state legislator were wiretapped by FBI</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
