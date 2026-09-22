@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AstroForge is putting AI in command of its next spacecraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">TechCrunch</span>
+    </div>
+    <h1>AstroForge is putting AI in command of its next spacecraft</h1>
+    <p class="hint">2026-09-22 15:00</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://techcrunch.com/wp-content/uploads/2018/02/tc-backlight-e1689786273147.png?w=1200" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>Fly to an asteroid, land on it, make no mistakes: If only it were that easy.</p><p>When NASA sends spacecraft to explore the solar system, they build in redundancy and automation. But much of the work is done by teams of flight controllers communicating with the vehicle from Earth. The Osiris-Rex mission, which rendezvoused with an asteroid in 2018, had 100 operators on each eight-hour shift.</p><p>But resources like that aren’t available to startups, so AstroForge, which is developing technology to mine asteroids, is turning to AI. The company has developed an autonomous control stack for its spacecraft called “Solo,” a transformer-based model made in-house.</p><p>AstroForge plans to fly its first autonomous spacecraft in 2027 on the first rocket launched by Stock Space. That mission will be backed by NASA and is expected to gather scientific data about the Sun.</p><p>That would be an accomplishment: Most spacecraft autonomy depends on traditional control algorithms due to concerns about the unreliability of neural networks. The first use of a neural network to control a satellite’s positioning in orbit took place just last year.</p><p>AstroForge, founded in 2022 and backed with $56 million in venture funding, has launched two prototype spacecraft, both of which suffered anomalies that prevented them from achieving most of their mission objectives. In 2025, its Odin spacecraft was launched into deep space, but the company had difficulty communicating with it. There are a limited number of antennas on Earth big enough to transmit to spacecraft hundreds of thousands of miles away, and the windows of time in which to do it are small.</p><p>Ultimately, AstroForge couldn’t gain control of Odin, but the experience spurred it to consider alternatives: Could it put sufficient intelligence onboard the spacecraft for it to solve its own problems?</p><p>“Would that have been recoverable with all the data on the spacecraft? I don’t know, but I can tell you nothing onboard tried it, and I would love something onboard to try if the spacecraft is unrecoverable at launch,” Matthew Gialich, AstroForge’s co-founder and CEO, said.</p><p>“The trade for me is: Do I go build my own ground network, which is going to cost [around] $200 million to put up five dishes around the world and then do operations on it, or do I try to remove it with a model?”</p><p>Armand Awad, AstroForge’s head of flight software, said the company decided to leverage the advances in transformer models driven by the frontier labs. It created a stack that includes traditional control algorithms, models trained on test data for specific subsystems like power generation or navigation, and an overall intelligence layer trained on about 2,500 sensors in the spacecraft.</p><p>“I’m not saying I’m going to make general spacecraft autonomy or general autonomy for the world,” Gialich said. “I’m making a constrained autonomy at a very low sensor input, following the basic training of a transformer model.”</p><p>In theory, the agent in control of the spacecraft will perform tasks like anomaly resolution. Awad imagines it realizing that it has lost track of its position in space, correlating a power anomaly to issues in its star tracker, and fixing the whole thing — “probably turning it on and off in this case.”</p><p>The company’s third vehicle, DeepSpace-2, is currently set to launch alongside Intuitive Machines’ third moon mission, expected to head for space by the end of 2026. Solo will be onboard that vehicle, flying in “shadow mode,” so AstroForge’s engineers can put it through its paces before the Autonomy-1 mission.</p><p>Will this truly be an AI agent operating an independent spacecraft?</p><p>“I don’t plan on flying radios that can receive from Earth on Autonomy-1,” Gialich said. “We have to go all in right now. The team’s probably going to talk me into it by the time we fly it. But right now, I’m telling them no radios.”</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-c6a6bdc6ab31.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108365875-260917_cn_23_tech_aurora_driverless_trucks_stringout00_01_48_00Still001.png?v=1790023159&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Autonomous trucking company Aurora looks to accelerate toward profitability</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-11c9455cf9be.html">
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Russian Oil Flows Dip as US Sanctions, Saudi Supplies Loom</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-ade5f5791578.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2194453798.jpeg?resize=1200,800" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Noble Carbon will show how it’s making EV charger installs painless at TechCrunch Disrupt</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-0c0fc63e5b35.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2025/09/Disrupt-2025-AI-Stage.jpg?resize=1200,800" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-f7e376b27bcd.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108272809-17725528062026-03-03t153158z_1980154696_rc22xjad02v7_rtrmadp_0_usa-election-north-carolina.jpeg?v=1772552824&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Democrats lead the polls. Republicans lead in cash heading into the midterms</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-b4018b74e608.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/22012264/vpavic_4275_20201030_0082.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Xbox is barely Xbox anymore</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
