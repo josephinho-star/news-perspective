@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inworld shares the hidden math behind every AI app you use for free</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill lean-right">lean-right</span>
+      <span class="outlet-name">New York Post</span>
+    </div>
+    <h1>Inworld shares the hidden math behind every AI app you use for free</h1>
+    <p class="hint">2026-09-25 11:30</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F09%2Finworld.jpg?quality%3D90%26" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>Somewhere between the moment a user opens a free app and the moment they close it, a quiet transaction happens that has nothing to do with subscriptions or ads. Every message sent, every voice reply generated, every choice a player makes inside an AI-driven story costs something to produce, and most of the people generating that cost will never pay a cent for it.</p><p>That’s the uncomfortable arithmetic behind consumer AI products. Unlike enterprise software, where a handful of paying seats can cover infrastructure many times over, consumer applications run on long sessions, global audiences, and thin or nonexistent per-user margins. Every additional interaction draws on speech models, language models, and compute. The bill comes due whether or not the user ever converts to a paying customer.</p><p>Faced with that math, teams tend to land on one of four choices, and each comes with its own tradeoffs. They ration features, limiting what free users can access. They restrict languages, serving only the markets that justify the cost. They burn margin, absorbing losses in hopes that scale eventually helps. Or they invest in building their own infrastructure, which can require significant time and resources.</p><p>Inworld, a research lab and inference provider focused on real-time AI, was built around the argument that this shouldn’t be the only menu of choices. Its stack, spanning first-party speech models, served language models, routing, and dedicated inference capacity, is designed to help lower per-unit infrastructure costs as usage grows. The company’s recent TTS-2 pricing reflects that logic directly: on-demand character pricing starts around $25 per million characters and steps down toward $12.50 at higher committed usage, a curve built around the idea that scale should be rewarded, not punished.</p><p>Inworld cites customer deployments as examples of how infrastructure costs can vary at scale. Wishroll’s social simulation app, Status, reports roughly a 95% reduction in AI cost while serving more than 500,000 daily active users who spend, on average, over an hour and a half in the app each day. Language-learning app Talkpal and scripture app Bible Chat report similar savings on voice delivery, without cutting features.</p><p>Games push the problem further still. Latitude’s Voyage generates thousands of narrative choices per player turn, and ARX Media’s ISEKAI ZERO stretches that cost across long, recurring sessions where every returning user compounds context and voice expense.</p><p>Factors in evaluating AI infrastructure costs</p><p>None of these cases argue that any one provider is the cheapest option available. These examples highlight factors that can be considered when comparing infrastructure costs, including output quality, workload, cost per unit, and performance under sustained traffic. For an industry built on giving things away for free, that standard may matter more than any single model’s benchmark score.</p><p>Prices and availability are accurate as of the time of publication and are subject to change without notice. Please check the retailer’s website for the most up-to-date pricing information.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-f3917234fccc.html">
+        
+          <div class="related-thumb">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/931/523/FINLAND-VIKING-AGE-SILVER-HOARD-1.jpg?ve=1&tl=1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm right">right</span>
+          <h4>Man searching with metal detector unearths massive Viking Age fortune, shattering records</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-d2ad12bec27c.html">
+        
+          <div class="related-thumb">
+            <img src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/09/931/523/Rahm-Emanuel-Texas-Tribfest-4.jpg?ve=1&tl=1" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm right">right</span>
+          <h4>Rahm Emanuel touts what separates himself from other Dems as he mulls 2028 presidential bid</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-989e5f1f1274.html">
+        
+          <div class="related-thumb">
+            <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F09%2Funabomber-movie-director-interview-janus-metz.jpg?quality%3D90%26" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm lean-right">lean-right</span>
+          <h4>Netflix’s ‘Unabomber’ Movie Director Janus Metz Talks Casting Russell Crowe and Jacob Tremblay: “It’s a Father-Son Story in Many Ways”</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-b4ce3cd6ff86.html">
+        
+          <div class="related-thumb">
+            <img src="https://nypost.com/wp-content%2Fuploads%2Fsites%2F2%2F2026%2F09%2Ffsa-deals.png" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm lean-right">lean-right</span>
+          <h4>All the surprising FSA-eligible deals hiding on Amazon, starting at $13</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-db11b09dd642.html">
+        
+          <div class="related-thumb">
+            <img src="https://pagesix.com/wp-content%2Fuploads%2Fsites%2F3%2F2026%2F09%2FUntitled-2-copy-2-2.jpg?quality%3D90%26" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm lean-right">lean-right</span>
+          <h4>Former ‘Swan’ contestants detail the horrors behind ‘most sadistic’ reality show: ‘I almost died’</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-39c9cc23c002.html">
+        
+          <div class="related-thumb">
+            <img src="https://static01.nyt.com/images/2026/09/24/weather/2026-09-24-outlooks-index-promo/2026-09-24-outlooks-index-promo-mediumSquareAt3X-v23.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm lean-left">lean-left</span>
+          <h4>Nor’easter Could Bring Heavy Rain, Winds, and Flooding to East Coast</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
