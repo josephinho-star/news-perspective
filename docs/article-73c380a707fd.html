@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiny implants use the body as a communication network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">Scientific American</span>
+    </div>
+    <h1>Tiny implants use the body as a communication network</h1>
+    <p class="hint">2026-09-29 11:00</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://static.scientificamerican.com/dam/asset/e42a845e-1087-402d-8488-02f2247acd42/SWANS-injectable-device.jpg?m=1790629953.695&w=1200" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>When a rat’s front paw moved, its hind leg answered. Normally, such coordination is the nervous system’s job, carried out by little electrical signals traveling along nerves. This time the message went off-roading, traveling through the animal’s tissue as a faint electrical pulse and switching on an implant that jolted a nerve in that leg.</p><p>The experiment showcased the Smart Wireless Autonomous Networking System, or SWANS, which researchers described in the journal Science last week. It’s a bid to build a sort of digital nervous system for medical devices. If it holds up in people, a sensor tucked in one corner of the body could someday tell an implant in another corner far away when to get back to work. “The body is not just where the devices sit,” says Yoon Jae Lee, an assistant professor of computer science at Georgia State University and a co-author of the study. “It’s become a part of the communication network.”</p><p>Pacemakers and some other implants can already sense trouble and respond on the spot. But many treatments, such as insulin pumps, need to listen to what’s happening in one place in the body to decide what to do in another. Today that communication often runs over Bluetooth. The dream is to embed sensors wherever they’re needed, such as deep in the gut or muscles, where there’s little room for the bulky battery that wireless communication demands.</p><p>On supporting science journalism</p><p>If you're enjoying this article, consider supporting our award-winning journalism by subscribing. By purchasing a subscription you are helping to ensure the future of impactful stories about the discoveries and ideas shaping our world today.</p><p>Smaller implants are also less likely to disturb the body and the tissue around them, according to Hyowon “Hugh” Lee, a professor of biomedical engineering at Purdue University and a program manager at the U.S. Advanced Research Projects Agency for Health, who was not involved in the study. “The body doesn’t really like when you jab things into it,” he says. By skipping traditional wireless technology, the SWANS team made its devices small enough to inject with a syringe.</p><p>A SWANS network pairs sensors, which notice some change in the body, with actuators that do something about it once they get the signal. In the rat, sensors worn on the front paws reported to a wearable hub, and the actuator was a stimulator hooked up to the sciatic nerve in the hind leg.</p><p>The trick is that the body’s salty tissues conduct electricity, so a tiny voltage pulse from the hub could spread across the rat’s body to reach the implant. “We have this ability to decode information in one spot and shuttle it all the way to another area where it’s needed,” says Alex Abramson, an assistant professor researching biotechnology at the Georgia Institute of Technology and the study’s senior author. According to Abramson, the pulses are basically imperceptible, comparable to what a pacemaker sends to the heart.</p><p>Keeping the messages simple, closer to a yes or no than a data stream, means the devices use very little power; the implants draw next to nothing while they await a signal. By the team’s estimate, an actuator triggered once a day could last for about a year, which would translate to an annual doctor’s visit to pull out the dead implants and inject new ones.</p><p>The authors see uses for SWANS well beyond a rat’s hind legs, from drug delivery to prosthetic limbs. “Imagine that your prosthetic was connecting to your skin,” Abramson says. “Well, we can send information from the endpoints of a muscle all the way to the skin and then have that information sent into the prosthetic.”</p><p>Using the body as a shuttle comes with some limits, though. In the study, the signals traveled about 40 centimeters, plenty of distance to cross a rat’s body but not so much for treatments in people. Humans are fattier and bulkier than the average rat, potentially further limiting how far these signals can travel, according to Hugh Lee. Amplifying the signals could help, as long as the electronics stay small. And the network has to be safe against anything, or anyone, trying to mess with it. “If you have some way of spoofing a wearable device to be able to activate things that are not supposed to be activated, that could be problematic,” he says.</p><p>Researchers have been chasing digital nervous systems for decades. One earlier attempt, a line of injectable microstimulators called the Bionic Neuron, or BION, made it into human trials but never received approval from the U.S. Food and Drug Administration. SWANS has only made it into rats. But the idea is too tantalizing for engineers to shelve: an implant that doesn’t need to stream much information at all and needs only the body to carry a whisper from one place to another.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-4e1c83a69d1e.html">
+        
+          <div class="related-thumb">
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-1531989233-500x500.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>A local network of implants uses your body as the wiring</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-556e1e4b03fe.html">
+        
+          <div class="related-thumb">
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2026/04/gemini-general-1-500x500.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Google announces Gemini 4 Argon AI model, but you can't use it yet</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
