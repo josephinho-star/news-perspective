@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amex introduces a framework to prevent AI agents from making unauthorized purchases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">TechCrunch</span>
+    </div>
+    <h1>Amex introduces a framework to prevent AI agents from making unauthorized purchases</h1>
+    <p class="hint">2026-10-13 13:00</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://techcrunch.com/wp-content/uploads/2026/10/amex-GettyImages-171311164.jpg?resize=1200,800" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>Personal AI agents are increasingly making transactions on their users’ behalf, but given the nondeterministic nature of large language models, AI bots are prone to doing what they’re not supposed to. Which, in this case, raises the possibility of AI misfiring and making unauthorized transactions.</p><p>To get ahead of this problem, American Express is introducing a new framework designed to capture and authenticate a customer’s purchase intent before an AI agent completes the transaction.</p><p>The idea is that there should be a way to ensure that the customer’s purchase instructions are carried throughout the transaction lifecycle, Amex says, from the purchase to everything that follows.</p><p>Dubbed the “Intent Intelligence Framework,” the company hopes it will become an industry standard for AI-powered transactions.</p><p>“These new transactions will have a consumer, a merchant, and an agent,” explained Amex’s VP of Agentic Partnerships and Strategy, Hannah Bozian, in an interview with TechCrunch. She said the company wanted to ensure that agentic transactions are still “seamless, trusted, and secure, the way our card members expect them to be.”</p><p>This framework’s release follows the company’s April launch of Amex’s Agentic Commerce Experiences, or the ACE Developer Toolkit, which includes a handful of services that now include the intent framework.</p><p>Amex said it has not yet seen an increase in disputes because of agentic commerce, but it wanted to be proactive in building this technology as this type of commerce scales. In part, that’s because consumers have signaled they’re open to trying agentic commerce.</p><p>In a recent Amex Trendex report, 66% of surveyed U.S. consumers said they’re likely to use AI agents to research the best price for a product or service, and 61% said they’re likely to use it for a product or service recommendation over the next 12 months, the company told TechCrunch.</p><p>To start, Amex’s new intent framework begins with a Create Intent API, which will capture the customer’s purchase instructions along with other constraints they may have included in their request, like the merchant’s name, maximum budget, and other product preferences. How this intent is collected may vary depending on the AI model involved, but the plan is to make this framework flexible enough to support all agentic commerce models, Bozian said.</p><p>The customer then authenticates their identity and signs off on the intent captured by the agent.</p><p>Then an Intent ID, a unique identifier representing the intent, is created, along with a Proof of Intent Token, which includes the customer’s high-level constraints. This token is used to obtain a secure digital payment credential that the agent will use at checkout instead of the customer’s actual credit card number. In doing so, Amex says, the purchase will remain secure while being aligned with what the customer authorized the agent to do.</p><p>This Intent ID and token can also be used in different parts of the transaction process, helping companies to manage areas like fraud prevention and dispute resolution, Amex said.</p><p>“Our approach differs from the implementations of others in that it pulls intent earlier into the transaction flow. And this is important because it helps mitigate some risk before the risk occurs,” said Bozian. She offered the example of a customer asking an agent to buy white Nike sneakers in a size 9, but the agent submits a request to purchase shoes from Adidas. In such a case, Amex could prevent the transaction from going through because the agent made a mistake.</p><p>Bozian also notes that while many agents today ask for customer consent before making a purchase, Amex foresees a future where agents may act much more autonomously in some cases. For instance, a consumer might allow their agent to re-order household staples, like paper towels or toilet paper — categories in which the only real constraint is the price and size, not merchant or brand. In these scenarios, it makes sense to have technology in the loop performing that extra check, to ensure the transactions match the customer’s intent.</p><p>Having a log of what was authorized by which agent and when could also help address fraud on behalf of the agent, she noted.</p><p>Amex is already in discussions with partners across the payments ecosystem for implementing ACE, which includes the agentic tokens that contain Amex’s payment credentials, as well as other parts of the developer kit.</p><p>The company said it plans to actively develop ACE further as the agentic commerce ecosystem evolves.</p><p>On October 13 at TechCrunch Disrupt 2026‘s Industry Stage, Amex VP of Agentic Partnerships and Strategy at American Express, Hannah Bozian, will discuss the company’s new”Intent Intelligence Framework” in more detail, and what it means for the world of agentic commerce.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-de48459db6d9.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/10/Apple-TV-4K-261013_big.jpg.large_2x.jpg?resize=1200,675" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Apple launches a new Apple TV 4K with Siri AI and remote-free voice commands</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-772771289386.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/Screenshot-2026-10-13-at-9.06.28-AM.png?quality=90&strip=all&crop=0%2C3.4613147178592%2C100%2C93.077370564282&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Watch Apple’s reveal video for the HomeView</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-c5d7fab3c9e5.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108326697-1782389225408-gettyimages-2277830126-boivin-notitle260527_npNF9.jpeg?v=1782389330&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Micron drops 5% as tech stocks rattled by China chip breakthrough claims</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-1994f6f59cfe.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/107427225-17181183412024-06-11t145534z_1145331028_rc2198a75h09_rtrmadp_0_usa-shkreli-wutang-clan.jpeg?v=1718118374&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Martin Shkreli violated lifetime pharma industry ban, FTC and states say in contempt claim</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-efabf4d2b709.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/236806_Getty_Images_AI_Images_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Getty Images is going private after failed Shutterstock merger</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-c31644d712c9.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108403154-1791896901451-108403154-1791896082565-tudor4.jpg?v=1791896910&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Paul Tudor Jones says 2027 could be a really challenging year for the stock market</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
