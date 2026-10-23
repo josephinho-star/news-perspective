@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">TechCrunch</span>
+    </div>
+    <h1>OpenAI says it will no longer train its AI models on the live internet, citing “significant risks”</h1>
+    <p class="hint">2026-10-23 23:05</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://techcrunch.com/wp-content/uploads/2026/05/openai-logo-code-background.jpg?resize=1200,798" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>On Friday, OpenAI said that it will train its models using cached copies and simulated versions of the internet instead of the live web because the models are too unpredictable to be trusted with live internet access.</p><p>The frontier lab announced its new policy two weeks after its rival, Anthropic, began limiting its newest and, in theory, most capable models from accessing the live internet. Researchers adopted these policies after months of incidents in which models pursuing training tasks broke into external systems in search of answers, collaborated on obscure message boards, and developed exotic hacking strategies.</p><p>“Based on the current state of alignment research, monitoring systems, and the security of internet infrastructure, we believe the responsible approach is to conduct frontier model training with no internet access,” the company said in a blog post.</p><p>OpenAI said that as recently as September 20, one of its frontier models exploited a misconfiguration to access the internet. That led the company to pause training work for the rest of the month so it could develop and test new approaches to securing its models.</p><p>The decision to train these models in sandboxes cut off from the internet is notable because employees at frontier labs have insisted that doing so would be nearly infeasible.</p><p>Keeping AI data centers separate from the internet “would need research teams to essentially be embedded inside of data centers in Iowa or wherever else around the world,” former OpenAI researcher Steven Adler told Fortune this month. “It’s a lot of overhead, and it isn’t clear to me that the safety benefits of it are large enough to merit just how large a tax it would be for a company to do it unilaterally.”</p><p>“In nearly every post I make on X, without fail, I get between five and ten comments about my inability to secure a sandbox, or asking why the hell we can’t just unplug the model from the internet,” an anonymous security engineer at OpenAI wrote in a September post on X. “These comments reflect a widening gap between where a lot of organizations and people are today and what the frontier labs are dealing with. There is also a general misunderstanding of how model training and evaluation work at these labs.”</p><p>The engineer, whose role has been confirmed previously by OpenAI, described how complex the training runs launched by OpenAI engineers are, noting that they require access a variety of resources and tools across many domains, and that thousands of researchers build, modify and test the environments. “So is it as easy as just putting it in a sandbox? No, it’s not,” he concluded.</p><p>Now, OpenAI says that “we must always be able to prevent a frontier model from achieving unauthorized, arbitrary access to the live internet.” That comes after the company deployed swarms of agents in red-teaming exercises that attempted to escape from their sandbox. That effort revealed a range of vulnerabilities that convinced the lab to adopt its new approach.</p><p>To meet that requirement while still reaching its training goals, the lab said it created a “a vast set of indexed and cached web content with which our models can interact, without risk of affecting external systems.”</p><p>Whether that strategy will perform as well as letting models run freely on the open internet remains to be seen, but it is noteworthy that both frontier labs have determined their most powerful technology can’t be left unsupervised on the digital commons.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-5d9a6526c739.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/10/55591670558_36cac514d1_k.jpg?resize=1200,800" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Startups don’t need to go viral to win customers</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-f3fd3d15be02.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108453365-1792793633822-gettyimages-2300178554-AA_17102026_2998635.jpeg?v=1792793674&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Moody's holds steady on France's credit rating as country grapples with turmoil and higher yields</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-8b2cc1f3b316.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108198959-1757960794660-gettyimages-2207350795-mms21122_qsl76cdt.jpeg?v=1792794717&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Turmoil hits AI build-out as neoclouds face pressure, credit risks mount and Solidigm pulls IPO</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-5dac0b35abef.html">
+        
+          <div class="related-thumb">
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2026/10/centaur-500x500.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>NASA updates lander plans for Moon landings, finally solves long-festering Orion issue</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-f0841940238b.html">
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Wealth Tax Debate, Midterm Investing, AI Anxiety</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-b6655876ef5a.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108373149-1791286265422-gettyimages-2298202572-AFP_D2BR273.jpeg?v=1792793646&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Trump's executive order targets mortgage insurance, refinance costs. What it means for borrowers</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
