@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">TechCrunch</span>
+    </div>
+    <h1>Frontier AI labs say their models refuted the Exponential Time Hypothesis. What does that mean?</h1>
+    <p class="hint">2026-10-27 17:08</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://techcrunch.com/wp-content/uploads/2026/04/Screenshot-2026-04-14-at-7.00.44-PM.png?resize=1200,783" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>OpenAI released solutions to three blockbuster math problems that have long vexed researchers yesterday. One was a surprise rejection of the Exponential Time Hypothesis (ETH), a durable assumption in computer science that plays a large role in how we understand what is difficult to compute.</p><p>As with previous proof-drops from the frontier lab, scientific communities responded with a mixture of thrill and dismay. Anthropic mathematician Levent Alpöge suggested that OpenAI was basing its solutions from pre-existing work, and hours later, Anthropic subsequently released its own refutation of ETH.</p><p>However, OpenAI’s process is evolving. This time, the lab structured its releases differently for each of the three disciplines involved: Mathematicians got the work dropped on GitHub; the computer scientists formed a working group, asked for the proofs to be shared publicly and OpenAI to fund a conference to discuss them; the physicists formed a working group that will determine how their result will be released.</p><p>MIT Professor Ryan Williams is the computer scientist who is organizing his field’s response to the new finding. Williams, whose work focuses on these questions of computational complexity, has criticized OpenAI’s approach in the past, calling its proof dump earlier this October a “DDOS attack on mathematicians.”</p><p>However, he agreed to collaborate with the frontier labs in order to help shepherd ideas that are vital to the field, he told TechCrunch. The lab asked him to help interpret the solution, along with UC San Diego computer scientists Russell Impagliazzo and Ramamohan Paturi, who first published the ETH in 1999.</p><p>Their first step was to release an open letter calling for feedback from scientists interested in these problems and a discussion of the norms around AI contributions to their work.</p><p>“Some parts [of OpenAI’s proof] are, maybe you could say routine, but then yes, there are two or three alien-looking parts, and it’s exactly these parts that that I saw that made me think, wow, this is something that the whole community needs to work on together,” Williams told TechCrunch.</p><p>Are you down with P vs NP?</p><p>The ETH is part of a broader class of problems known as P vs NP, which has animated computer science and many other fields for decades. Reductively, researchers are trying to understand if any problem whose solution can be easily verified (NP) can also be easily solved (P).</p><p>A simple example is the game Sodoku: Once a solution to a puzzle is in place, it can be quickly verified, but finding the solution is time-consuming. That dynamic is true across a range of important problems, and the insight underpins cryptographic systems: When you have the key to an encoded message, you can reveal it, but actually cracking an effective code takes too long to be useful.</p><p>However, scientists have yet to prove whether that is always true. “P = NP is saying that, not only can you verify Sudoku solutions when they exist, you can just generate them,” Williams said. “P = NP is asserting that this is true for every single problem you can verify quickly — if you can verify it quickly, you can solve it quickly. So this just seems that just seems too good to be true.”</p><p>That’s why most scientists assume that P ≠ NP. ETH provided evidence for that. It basically says that even the fastest computer algorithm needs exponentially more time to find a solution as the number of variables grow in a specific class of tricky logic puzzle.</p><p>The claims from OpenAI and Anthropic is that their models have come up with algorithms that solve those puzzles in “sub-exponential” time, meaning faster than the speeds previously thought possible. If true, they may have proven the EFT to be false — refuted it, in scientific terms — and maybe opened up a path for algorithms that generally perform P = NP.</p><p>“Every computer scientist should probably put a a little more weight on the plausibility of P = NP, but one’s weight may vary,” Williams said. “I do think that it kind of calls into question a lot of the intuitions that we thought we had about … how tractable [hard NP problems] are. I also think that this is probably not the final answer either. I don’t think that OpenAI’s algorithm could possibly be the best algorithm you can get.”</p><p>The work ahead for computer scientists</p><p>The durability of ETH has lead to it being included in many scientific papers over the past decade that will need to be revisited if the AI labs claims that they’ve proven it wrong holds up, Williams said.</p><p>“This is partly why I was asking or pushing OpenAI to support a conference on this — it’s going to affect many researchers’ works, and we need to figure out, okay, what happens next besides understanding the algorithms, we need to understand, what should the foundations be that we had before?” he said.</p><p>Before scientific concerns, there are cybersecurity questions. Williams said that an improved algorithm could imply that cryptographic systems relying on certain key sizes could be considered broken. So one of the first questions he asked OpenAI science lead Dan Roberts “was if they had checked that that this affects any crypto systems … is anything insecure now? And apparently, they checked, and they were reasonably confident that this didn’t … imply any breaks.”</p><p>This new AI paradigm of scientific discovery is still a work in progress, but Williams says he is optimistic despite real concerns, particularly about training the next generation of scientists. Being a computer scientist who does high level math has perhaps made the adjustment easier for him than for pure mathematicians.</p><p>Still, he says AI is “forcing people to be a little more ambitious about the kind of work that they do, and to think more deeply about okay, if all the things I used to work on are now low hanging fruit for AI, how can I raise the bar for the the kind of scientific questions I want to ask?”</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-ba95afd7eb19.html">
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>A Visit to the AI Model Retirement Home</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-1455fc38cf18.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108279126-1773774347000-gettyimages-2217524417-296334final.jpeg?v=1777669100&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Stocks making the biggest moves midday: SoFi Technologies, Pentair, Royal Caribbean, JetBlue & more</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-4422f93ddf66.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/supermouse1.jpg?quality=90&strip=all&crop=0%2C10.719133494003%2C100%2C78.561733011995&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>The Super Mouse puts a touchscreen macro pad under your hand</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-9c2aabe5af39.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108469071-1793108548085-Biden_Laptop_FBI_Officials_Charged-26296558759831-AP.jpg?v=1793108598&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Judge blasts prosecutors, refuses to sign new criminal complaint against ex-FBI officials</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-dacbb977e533.html">
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Scotiabank Plans SRT Transaction Tied to $2 Billion of Loans</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-fc22cc8da0e0.html">
+        
+          <div class="related-thumb">
+            <img src="https://image.cnbcfm.com/api/v1/image/108469757-1793120004299-Screenshot-2026-10-27-at-125228_PM.jpg?v=1793120065&w=1920&h=1080" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Oracle integrates ChatGPT, Codex into apps and expands cloud chip lineup</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
