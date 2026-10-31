@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I built an AI Tamagotchi before Meta could</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">The Verge</span>
+    </div>
+    <h1>I built an AI Tamagotchi before Meta could</h1>
+    <p class="hint">2026-10-31 16:05</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/verge-sean-hollister-muse-gadget-331A2564-01-3.jpg?quality=90&strip=all&crop=4%2C9.7534360513847%2C96%2C75.393048208485&w=1200" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>Mark Zuckerberg’s Meta made AI look so stinking cute by giving it a squishy little face — and this holiday season, he wants to sell you a Muse Charm so you can carry your jolly AI helper around like a Tamagotchi.</p><p>We have Muse Charm at home.</p><p>We have Muse Charm at home.</p><p>But I won’t be buying one, because we have Muse Charm at home. It cost just $50, and I’ve decided the learning experience was worth it.</p><p>My version doesn’t sport cameras or a 5G cellular radio, but it really talks to Muse and has cute avatars, too! It doubles as a pocket watch and a remote camera viewfinder, and it can (theoretically) control my smart home.</p><p>Or at least it can if you inject a lot of extra vibe code.</p><p>Weeks ago, I paid $50 to get a 1.75-inch touchscreen computer pendant drop-shipped from China — specifically the Waveshare ESP32-S3 1.75C. Not only does the push-to-talk AI devkit look a lot like the Muse Charm, but it’s officially sanctioned by Meta. It’s one of the company’s first suggestions if you want to build a “Muse Gadget,” a device that uses Meta’s open-source code and tokens to directly connect to its Muse AI cloud.</p><p>When the silver metal pocket watch arrived, it felt pretty useless to start. Setup was easy enough — I just plugged it into my PC and pointed Claude at Meta’s GitHub, then paired it to the Muse phone app. But even after I put Meta’s keys on the device, Muse originally thought I was sending it audio clips to transcribe rather than commands. After I cleared that up, Muse’s responses were still slow, and it didn’t answer me out loud. It was hard to tell what it was saying since it only showed a few words onscreen at a time, with no place to read full messages unless I whipped out my phone with its own Muse app.</p><p>Meta’s build also only came with a single Jolly avatar that mostly just sat there and looked cute, and it wouldn’t automatically discover smart home gadgets like Amazon Echo or Google Home devices do. (This gadget really didn’t do anything useful after my initial install.) And though Meta AI software engineers Anant Narayanan and Jeremy Payne include a neat sample app showing how Muse Gadgets can stream video from your phone camera, the lack of a remote shutter button made it not so useful for taking photos.</p><p>But a few sessions of Claude Code filled in almost all those holes. All I had to do was plug the Waveshare back into my PC, then ask Claude to reprogram each thing I wanted.</p><p>When I complained to Claude that I couldn’t properly read or hear Muse’s replies to my asks, issues that others have mentioned as well, Claude built a conversation history page so I can swipe right to read what it said, and I plugged in a British AI voice from ElevenLabs that speaks its answers out loud. (The voice was the least soul-sucking of the ones in ElevenLabs’ free tier, my wife and I agree, even if it doesn’t match the Muse avatars’ cuddly vibe at all.)</p><p>Thanks to Claude, I can now press a button to make my phone take a picture from across the room with a high-quality live preview, and my phone’s front-facing camera no longer displays upside down. Claude made fairly short work of adding a low-quality camera preview over Bluetooth, too, so I don’t need to be on home Wi-Fi to get photos from creative angles.</p><p>I asked Claude to make a whole batch of different avatars like the ones Meta showed off during Meta Connect, and to add a Tamagotchi-like minigame where they need food, play, sleep, and a bath. When the game seemed too simple to capture any attention, I had it add four different levels of hunger, boredom, and dirt. I decided treats should make a crunchy mess and get avatars dirtier when they eat them, and that too much play should tire out a pet. My wish was Claude’s command.</p><p>When I noticed I was accidentally letting go of the push-to-talk button too soon and making Muse choke on almost-empty audio, vibe coding fixed it minutes later by sending only audio over one second in length. The only obvious lag I’m seeing now is from Meta’s own servers — sometimes they’re responsive, sometimes they lag quite a bit.</p><p>It was so easy to let Claude reprogram the pendant that I asked it to build a few features specifically for this video in this story, including a working pocket watch face with three hands that actually tells the time. (That took it 15 minutes; now, when I say the hardware looks like a pocket watch, you can see what I mean!) It even found, downloaded, trimmed, and loaded video clips of Zuck introducing the Muse Charm and installed a video player so I could play those clips on the Waveshare.</p><p>I want you to understand I have no coding experience, and so I have no idea if any of this code is good. It might be fatally flawed. Nor do I trust Meta or its Muse agent with my email or my home network, particularly after hearing how it leaked one reviewer’s home address. (I put it on guest Wi-Fi from the get-go as a precaution.)</p><p>That means I don’t really know how useful a Muse Charm may or may not be for those who do know how to code and are willing to take a bigger leap of faith. But after nearly dropping a bulky little silver pendant a couple of times, one with no more Muse functionality than my phone (and quite a bit less without additional code), I’m thinking Muse itself isn’t the reason to buy a dedicated compute pocket watch.</p><p>The reason to have a dedicated piece of hardware is to do things you can’t do on the phone that’s already in your pocket, like coding the entire gadget to do whatever you want. Which makes me wonder: Will the actual Muse Charm be this freely programmable, or would the kind of people who’d buy one be better off with a development kit? I guess we’ll see when it ships.</p><p>- Sam Altman says it’s better for RAM to be in a data center than on your desk</p><p>- The Apple Pencil turned the Duo into my new favorite notebook</p><p>- Sam Altman sympathizes with mathematicians, but says OpenAI’s math onslaught won’t stop</p><p>- The HomeView and Echo Show 16 could be the family computers I’ve been asking for</p><p>- Reddit will force everyone to log in</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-344dcf79744a.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/07/OpenAI-logo-green.jpg?w=1024" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>OpenAI reportedly lowers funding target for new round</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-5690fa4bc638.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2259084458.jpg?resize=1200,801" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>From restaurant guides to payments, here’s how TikTok is building a super app</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-7b5ed5dd303b.html">
+        
+          <div class="related-thumb">
+            <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/10d-outlook-filterresults.png?quality=90&strip=all&crop=0%2C8.2713403922147%2C100%2C83.457319215571&w=1200" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Windows 11 tries new shortcuts for Xbox gaming mode and search</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-538ea1326a6a.html">
+        
+          <div class="related-thumb">
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2026/10/GettyImages-2301817894-500x500.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Basically no one is using AI agents for their DoorDash orders</h4>
+        </div>
+      </a>
+    
+      <a class="related-item" href="article-f986a412ee0e.html">
+        
+          <div class="related-thumb">
+            <img src="https://techcrunch.com/wp-content/uploads/2022/08/GettyImages-1232015093.jpg?resize=1200,800" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>DoorDash said it’s only received ‘several hundred’ orders from AI agents</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
