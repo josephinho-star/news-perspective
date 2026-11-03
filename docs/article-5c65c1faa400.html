@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How hackers are turning grocery store freezers into heaters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark") document.documentElement.dataset.theme = "dark";
+      } catch (e) {}
+    })();
+  </script>
+  
+    <header class="masthead-simple">
+      <a class="brand-small" href="index.html">MERIDIAN</a>
+      <nav>
+        
+        <button class="btn night-toggle" id="nightToggle" type="button">Night</button>
+      </nav>
+    </header>
+  
+  <main>
+    
+  <div class="article-layout">
+  <aside class="article-nav">
+    <a class="side-link home" href="index.html">&larr; All stories</a>
+
+    <span class="side-heading">Topics</span>
+    
+      <a class="side-link" href="index.html?topic=world">World</a>
+    
+      <a class="side-link" href="index.html?topic=us-politics">US Politics</a>
+    
+      <a class="side-link" href="index.html?topic=international-relations">International Relations</a>
+    
+      <a class="side-link" href="index.html?topic=eu-politics">EU Politics</a>
+    
+      <a class="side-link" href="index.html?topic=asia">Asia</a>
+    
+      <a class="side-link" href="index.html?topic=turkey">Turkey</a>
+    
+      <a class="side-link" href="index.html?topic=business">Business</a>
+    
+      <a class="side-link" href="index.html?topic=finance">Finance</a>
+    
+      <a class="side-link" href="index.html?topic=tech">Tech</a>
+    
+      <a class="side-link" href="index.html?topic=science">Science</a>
+    
+      <a class="side-link" href="index.html?topic=climate">Climate</a>
+    
+      <a class="side-link" href="index.html?topic=sports">Sports</a>
+    
+
+    <span class="side-heading">Bias lens</span>
+    
+      <a class="side-link bias-link" href="index.html?bias=left">
+        <span class="bias-dot" style="background:#4a6fa5"></span>L &middot; Left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-left">
+        <span class="bias-dot" style="background:#7c9cc4"></span>LL &middot; Lean left
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=center">
+        <span class="bias-dot" style="background:#8a8a85"></span>C &middot; Center
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=lean-right">
+        <span class="bias-dot" style="background:#c17a6c"></span>LR &middot; Lean right
+      </a>
+    
+      <a class="side-link bias-link" href="index.html?bias=right">
+        <span class="bias-dot" style="background:#a94436"></span>R &middot; Right
+      </a>
+    
+  </aside>
+
+  <article class="reader">
+    <a class="back" href="index.html">&larr; Back to feed</a>
+    <div class="river-meta">
+      <span class="bias-pill center">center</span>
+      <span class="outlet-name">Scientific American</span>
+    </div>
+    <h1>How hackers are turning grocery store freezers into heaters</h1>
+    <p class="hint">2026-11-03 19:45</p>
+
+    
+      <div class="hero-thumb">
+        <img src="https://static.scientificamerican.com/dam/asset/ab782514-9028-4740-baa1-cc32fde163af/empty-fridges-in-Europe.jpg?m=1793736494.066&w=1200" alt="" onerror="this.parentElement.remove()">
+      </div>
+    
+
+    
+      <div class="body">
+        <p>The hacking era has hit supermarket freezer shelves.</p><p>In October attackers went after the refrigeration systems at hundreds of grocery stores in France. On the night of November 1 a second wave struck stores in Belgium, Sweden, the Netherlands, Ireland, Estonia, Finland and Luxembourg. Both sets of attacks followed a similar string of freezer failures at U.S. military bases back in August that the Pentagon now suspects was the work of hackers. In the worst cases, freezers flipped from cooling food to heating it to 50 degrees Celsius (122 degrees Fahrenheit) overnight.</p><p>This type of attack has proved much more devastating than simply cutting the power. Unless someone caught the problem in time, the heat ruined the food before anyone had a chance to salvage it. Jonathan Sogin, a food science researcher at Cornell University, says this made the window to preserve food “way shorter than if you were to take something out to defrost it on your counter.” Retailers say they’ve lost millions of euros’ worth of produce and frozen goods so far.</p><p>On supporting science journalism</p><p>If you're enjoying this article, consider supporting our award-winning journalism by subscribing. By purchasing a subscription you are helping to ensure the future of impactful stories about the discoveries and ideas shaping our world today.</p><p>Some of the companies involved say the hackers went after the freezers’ evaporators, the coils where liquid refrigerant turns into gas, soaking up heat from the air inside the freezers as it does. To prevent frost from building up on the coils and stopping them from working, heating elements warm them every so often, in what’s called a defrost cycle.</p><p>The attackers hijacked this defrost cycle remotely, keeping the heating element on until the whole freezer warmed up. The problem is that these freezers are online, and so are the controls that run them. “There are tiny computers running there, figuring out what temperature to keep the refrigerator,” says Swarun Kumar, an electrical engineering professor at Carnegie Mellon University. These types of machines are often called smart devices, but Kumar says the small computers inside tend to be “dumb,” unable to discern when they’re being misused.</p><p>Worryingly, nobody knows what the attackers want yet. No one has claimed responsibility, and it’s not even clear whether the same group is behind the rolling hacks. Nor has anyone asked for a ransom, though a demand would likely just prompt a store to send someone to turn the heating element off rather than pay up.</p><p>"Because they are tiny computers, they're also dumb," says CMU professor Swarun Kumar. "They're ripe for attack."</p><p>This kind of attack could come to American grocers more widely, according to Amir Preminger, chief technology officer of the cyberphysical security company Claroty, whose researchers flagged security flaws in this kind of refrigeration controller in August. Because the U.S. is so much larger, he’s especially concerned that attackers could move up the supply chain to target refrigeration systems in distribution centers, potentially knocking out many grocery stores in an area at once. “We’re going to be witnessing different types of attacks that have the same end result on damaging the food supply availability for customers,” he says.</p><p>Still, these hacks may be more limited in scope than they first appear. One of the control systems that was reportedly targeted has had an advisory out for this kind of security vulnerability since May 2025. According to Keith Stouffer, a cybersecurity expert at the National Institute of Standards and Technology, updating outdated equipment and putting it behind better firewalls could have stopped attacks like these and could stop them going forward.</p><p>It may be tempting to cut off the freezers from the Internet entirely, but there are real benefits to keeping them connected. “If you have a centralized management system, everything becomes smart and easy to manage,” Preminger says. “So all of a sudden, these devices that used to be standalone machines have Wi-Fi capabilities.”</p><p>Sogin has dealt with a malfunctioning freezer of his own at home. “I put in a little thermometer, and it’s connected to some Wi-Fi thing, and so I get a notification if it goes off,” he says. Grocery store owners could, in theory, do the same, he suggests: hook up just the monitoring system online and send someone in whenever a problem turns up.</p><p>Each of those fixes costs money, though, and so does throwing out food worth millions. Grocery stores run on notoriously thin profit margins (1 to 3 percent, by most estimates), and there are only so many freezer catastrophes the industry can take.</p>
+      </div>
+    
+
+    
+  </article>
+
+  <aside class="related-col">
+    <span class="side-heading">More stories</span>
+    
+      <a class="related-item" href="article-b121628aeba0.html">
+        
+          <div class="related-thumb">
+            <img src="https://cdn.arstechnica.net/wp-content/uploads/2025/05/google-logo-big-g-grooves-500x500.jpg" alt="" loading="lazy" onerror="this.parentElement.remove()">
+          </div>
+        
+        <div class="related-body">
+          <span class="bias-pill sm center">center</span>
+          <h4>Google will let schools skip AI tools, but they have to give up search, too</h4>
+        </div>
+      </a>
+    
+  </aside>
+  </div>
+
+  </main>
+  <script>
+    (function () {
+      var btn = document.getElementById("nightToggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var root = document.documentElement;
+        var isDark = root.dataset.theme === "dark";
+        root.dataset.theme = isDark ? "light" : "dark";
+        try { localStorage.setItem("theme", isDark ? "light" : "dark"); } catch (e) {}
+      });
+    })();
+  </script>
+  <script src="static/filter.js"></script>
+</body>
+</html>
